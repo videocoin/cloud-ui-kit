@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Interface",
+    "components": ["Logo", "Typography", "Icon"]
+  },
+  {
+    "name": "Buttons",
+    "components": ["Button"]
+  },
+  {
+    "name": "Forms",
+    "components": ["Input", "Checkbox", "Radio"]
+  }
+]

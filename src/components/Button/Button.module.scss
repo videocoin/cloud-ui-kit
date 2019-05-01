@@ -1,0 +1,47 @@
+@import 'vars';
+
+.root {
+  border: 2px solid transparent;
+  border-radius: 28px;
+  box-shadow: 0 12px 28px rgba(12, 4, 23, 0.74);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.07px;
+  outline: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background-image: radial-gradient(
+      at 50% 155%,
+      rgba($white, 0.15) 0%,
+      rgba($white, 0) 100%
+    );
+    color: rgba($base, 0.76);
+  }
+
+  &:disabled {
+    background-color: rgba(#eee3ff, 0.1);
+    border-color: rgba($white, 0.18);
+    color: rgba(#e1ccff, 0.22);
+    pointer-events: none;
+  }
+}
+
+.size-md {
+  font-size: 14px;
+  height: 48px;
+  padding: 14px 36px;
+}
+
+.theme-primary {
+  background-color: $orange;
+}
+
+.theme-secondary {
+  background-color: $violet;
+}
+
+.theme-white {
+  background-color: $white;
+}

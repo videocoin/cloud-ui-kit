@@ -1,0 +1,15 @@
+body {
+  font-family: $baseFont;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.example {
+  color: red;
+
+  & > * {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}

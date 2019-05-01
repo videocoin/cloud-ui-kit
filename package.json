@@ -1,0 +1,67 @@
+{
+  "name": "videocoin-ui-kit",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "sideEffects": false,
+  "source": true,
+  "dependencies": {
+    "@types/jest": "24.0.12",
+    "@types/node": "11.13.8",
+    "@types/react": "16.8.15",
+    "@types/react-dom": "16.8.4",
+    "classnames": "^2.2.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.0",
+    "typescript": "3.4.5"
+  },
+  "scripts": {
+    "styleguide": "styleguidist server",
+    "styleguide:build": "yarn run svgo && styleguidist build",
+    "svgo": "svgo -f src/components/Icon/icons --disable=removeViewBox",
+    "start": "styleguidist server",
+    "build": "yarn run svgo && styleguidist build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.+(ts|tsx)\"",
+    "prettier": "prettier \"src/**/*.+(js|jsx|ts|tsx|json|css|scss|md)\"",
+    "format": "yarn prettier --write",
+    "validate": "yarn lint && yarn prettier --list-different"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@types/classnames": "^2.2.7",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-react-app": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
+    "node-sass-chokidar": "^1.3.4",
+    "prettier": "^1.17.0",
+    "react-docgen-typescript": "^1.12.4",
+    "react-styleguidist": "^9.0.9",
+    "svgo": "^1.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

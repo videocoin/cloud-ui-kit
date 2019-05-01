@@ -1,0 +1,294 @@
+@import 'vars';
+
+.display1 {
+  font-size: 92px;
+  font-weight: 300;
+  letter-spacing: -1.2px;
+  line-height: 96px;
+
+  &.light {
+    color: $light;
+  }
+
+  &.dark {
+    color: $dark;
+  }
+
+  &.white {
+    color: $white;
+  }
+
+  &.primary {
+    color: $primary;
+  }
+}
+
+.display2 {
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: -0.6px;
+  line-height: 72px;
+
+  &.light {
+    color: rgba($light, 0.87);
+  }
+
+  &.dark {
+    color: rgba($dark, 0.87);
+  }
+
+  &.white {
+    color: rgba($white, 0.87);
+  }
+
+  &.primary {
+    color: rgba($primary, 0.87);
+  }
+}
+
+.display3 {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: -0.04px;
+  line-height: 56px;
+
+  &.light {
+    color: rgba($light, 0.76);
+  }
+
+  &.dark {
+    color: rgba($dark, 0.76);
+  }
+
+  &.white {
+    color: rgba($white, 0.76);
+  }
+
+  &.primary {
+    color: rgba($primary, 0.76);
+  }
+}
+
+.title {
+  font-size: 32px;
+  letter-spacing: -0.1px;
+  line-height: 40px;
+
+  &.light {
+    color: $lightTitle;
+  }
+
+  &.dark {
+    color: $dark;
+  }
+
+  &.white {
+    color: $white;
+  }
+
+  &.primary {
+    color: $primary;
+  }
+}
+
+.smallTitle {
+  font-size: 24px;
+  font-weight: bold;
+  left: 36px;
+  letter-spacing: 0.8px;
+
+  &.light {
+    color: $lightSmallTitle;
+  }
+
+  &.dark {
+    color: $dark;
+  }
+
+  &.white {
+    color: $white;
+  }
+
+  &.primary {
+    color: $primary;
+  }
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  line-height: 32px;
+  text-transform: uppercase;
+
+  &.light {
+    color: $lightSubtitle;
+  }
+
+  &.dark {
+    color: rgba($dark, 0.36);
+  }
+
+  &.white {
+    color: rgba($white, 0.36);
+  }
+
+  &.primary {
+    color: rgba($primary, 0.92);
+  }
+}
+
+.subtitleAlt {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  line-height: 32px;
+
+  &.light {
+    color: $lightSubtitleAlt;
+  }
+
+  &.dark {
+    color: rgba($dark, 0.76);
+  }
+
+  &.white {
+    color: rgba($white, 0.76);
+  }
+
+  &.primary {
+    color: rgba($primary, 0.76);
+  }
+}
+
+.body {
+  letter-spacing: 0.12px;
+  line-height: 24px;
+
+  &.light {
+    color: $lightBody;
+  }
+
+  &.dark {
+    color: rgba($dark, 0.5);
+  }
+
+  &.white {
+    color: rgba($white, 0.94);
+  }
+
+  &.primary {
+    color: rgba($primary, 0.72);
+  }
+}
+
+.bodyAlt {
+  font-weight: 500;
+  letter-spacing: 0.12px;
+  line-height: 24px;
+
+  &.light {
+    color: $lightBodyAlt;
+  }
+
+  &.dark {
+    color: rgba($dark, 0.86);
+  }
+
+  &.white {
+    color: rgba($white, 0.94);
+  }
+
+  &.primary {
+    color: rgba($primary, 0.92);
+  }
+}
+
+.smallBody {
+  font-size: 14px;
+  letter-spacing: 0.28px;
+  line-height: 24px;
+
+  &.light {
+    color: $lightSmallBody;
+  }
+
+  &.dark {
+    color: rgba($dark, 0.56);
+  }
+
+  &.white {
+    color: rgba($white, 0.92);
+  }
+
+  &.primary {
+    color: rgba($primary, 0.72);
+  }
+}
+
+.smallBodyAlt {
+  font-size: 14px;
+  letter-spacing: 0.28px;
+  line-height: 24px;
+
+  &.light {
+    color: $lightSmallBodyAlt;
+  }
+
+  &.dark {
+    color: rgba($dark, 0.76);
+  }
+
+  &.white {
+    color: rgba($white, 0.87);
+  }
+
+  &.primary {
+    color: rgba($primary, 0.82);
+  }
+}
+
+.caption {
+  font-size: 12px;
+  letter-spacing: 0.06px;
+  line-height: 20px;
+
+  &.light {
+    color: $lightCaption;
+  }
+
+  &.dark {
+    color: rgba($dark, 0.5);
+  }
+
+  &.white {
+    color: rgba($white, 0.87);
+  }
+
+  &.primary {
+    color: rgba($primary, 0.72);
+  }
+}
+
+.button {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.07px;
+  text-transform: uppercase;
+
+  &.light {
+    color: $light;
+  }
+
+  &.dark {
+    color: $dark;
+  }
+
+  &.white {
+    color: rgba($white, 0.92);
+  }
+
+  &.primary {
+    color: $primary;
+  }
+}

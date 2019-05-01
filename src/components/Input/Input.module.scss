@@ -1,0 +1,169 @@
+@import 'vars';
+@import 'mixins';
+
+.root {
+  position: relative;
+  display: inline-flex;
+  height: 56px;
+  will-change: opacity, transform, color;
+  &.disabled {
+    opacity: 0.36;
+  }
+}
+
+.input {
+  align-self: flex-end;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 12px 32px 14px;
+  border-radius: 0;
+  border: none;
+  background: none;
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: $white;
+  caret-color: $caretColor;
+  @include placeholder {
+    opacity: 0;
+    color: rgba($lightBody, 0.48);
+  }
+  &:focus,
+  &.active {
+    ~ .label {
+      transform: translateY(-160%) scale(0.75);
+      max-width: 133.33333%;
+      text-overflow: clip;
+    }
+    @include placeholder {
+      opacity: 1;
+    }
+  }
+  &:focus {
+    ~ .label {
+      color: rgba($white, 0.87);
+    }
+  }
+  &:not(:focus).active {
+    ~ .label {
+      color: rgba($lightCaption, 0.87);
+    }
+  }
+  &:not(:focus).error,
+  &.error {
+    ~ .label {
+      color: $error;
+    }
+  }
+}
+
+.outline {
+  display: flex;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  text-align: left;
+  pointer-events: none;
+  &.notched {
+    .leading {
+      border-color: $inputFocusBorder;
+      border-width: 2px;
+    }
+    .notch {
+      padding-left: 0;
+      padding-right: 8px;
+      border-top: none;
+      border-color: $inputFocusBorder;
+      border-width: 2px;
+    }
+    .trailing {
+      border-color: $inputFocusBorder;
+      border-width: 2px;
+    }
+  }
+  &.error {
+    .leading {
+      border-color: $error;
+    }
+    .notch {
+      border-color: $error;
+    }
+    .trailing {
+      border-color: $error;
+    }
+  }
+}
+
+.leading,
+.notch,
+.trailing {
+  height: 100%;
+  transition: border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  pointer-events: none;
+}
+
+.leading {
+  border-radius: 4px 0 0 4px;
+  border-left: 1px solid;
+  border-color: $inputBorder;
+  border-right: none;
+  width: 21px;
+}
+
+.notch {
+  flex: 0 0 auto;
+  width: 0;
+  max-width: calc(100% - 32px * 2);
+  transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: none;
+  border-color: $inputBorder;
+}
+
+.trailing {
+  border-radius: 0 4px 4px 0;
+  flex-grow: 1;
+  border-left: none;
+  border-right: 1px solid;
+  border-color: $inputBorder;
+}
+
+.label {
+  display: inline-block;
+  position: absolute;
+  bottom: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: text;
+  overflow: hidden;
+  will-change: transform;
+  right: auto;
+  left: 32px;
+  color: $lightBody;
+  top: 21px;
+  pointer-events: none;
+  transform-origin: left top;
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.errorIcon {
+  background: $errorIcon;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 56px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
