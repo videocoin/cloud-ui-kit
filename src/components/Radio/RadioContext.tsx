@@ -1,14 +1,12 @@
-import * as React from 'react';
+import { ChangeEvent, createContext } from 'react';
 
 export interface RadioContextInterface {
   defaultSelected: string;
   selected: string;
   name: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
 }
 
-export const RadioContext = React.createContext<Partial<RadioContextInterface>>(
-  {},
-);
+export const RadioContext = createContext<Partial<RadioContextInterface>>({});
 export const RadioContextProvider = RadioContext.Provider;

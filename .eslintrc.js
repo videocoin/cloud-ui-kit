@@ -19,13 +19,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'prettier', 'react', 'import'],
   rules: {
     'prettier/prettier': 'error',
-    "@typescript-eslint/no-explicit-any": "off",
-    '@typescript-eslint/explicit-function-return-type': [
-      'error',
-      {
-        allowTypedFunctionExpressions: true,
-        allowExpressions: true
-      },
-    ],
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
   },
 };

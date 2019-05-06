@@ -1,14 +1,14 @@
-import * as React from 'react';
+import React, { ReactNode, useContext } from 'react';
 import css from './Radio.module.scss';
 import { RadioContext } from './RadioContext';
-import { useContext } from 'react';
 
-interface RadioBtn {
+export interface RadioBtnProps {
   value: string;
   disabled?: boolean;
+  children: ReactNode | string;
 }
 
-const Radio: React.FC<RadioBtn> = ({ value, children, disabled }) => {
+const Radio = ({ value, children, disabled }: RadioBtnProps) => {
   const { selected, onChange, name, disabled: disabledGroup } = useContext(
     RadioContext,
   );
@@ -29,7 +29,5 @@ const Radio: React.FC<RadioBtn> = ({ value, children, disabled }) => {
     </label>
   );
 };
-
-Radio.defaultProps = {};
 
 export default Radio;

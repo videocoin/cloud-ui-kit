@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React, { ReactNode } from 'react';
 import cn from 'classnames';
 import css from './Typography.module.scss';
 
-type TypographyType =
+export type TypographyType =
   | 'display1'
   | 'display2'
   | 'display3'
@@ -17,22 +17,25 @@ type TypographyType =
   | 'smallTitle'
   | 'title';
 
-type TypographyTag = 'div' | 'span' | 'p';
+export type TypographyTag = 'div' | 'span' | 'p';
 
-type TypographyTheme = 'light' | 'dark' | 'white' | 'primary';
+export type TypographyTheme = 'light' | 'dark' | 'white' | 'primary';
 
-interface Typography {
+export interface TypographyProps {
   type?: TypographyType;
   theme?: TypographyTheme;
   tagName?: TypographyTag;
+  children: ReactNode;
 }
 
-const Typography: React.FC<Typography> = ({
+const Typography = ({
   tagName: Comp = 'div',
   type = 'body',
   theme = 'light',
   ...props
-}) => <Comp className={cn(css.root, css[type], css[theme])} {...props} />;
+}: TypographyProps) => (
+  <Comp className={cn(css.root, css[type], theme && css[theme])} {...props} />
+);
 
 Typography.defaultProps = {
   tagName: 'div',

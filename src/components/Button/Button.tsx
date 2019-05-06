@@ -1,33 +1,39 @@
-import * as React from 'react';
+import React, { ReactNode, MouseEvent } from 'react';
 import cn from 'classnames';
 import css from './Button.module.scss';
 
-const styleKey = (key: string): string => (css as any)[key];
-
-type ButtonTheme = 'primary' | 'secondary' | 'white';
+type ButtonTheme = 'primary' | 'secondary' | 'white' | 'ghost';
 type ButtonSize = 'xs' | 'sm' | 'md' | 'lg';
-interface Button {
+type ButtonType = 'submit' | 'button' | 'reset';
+
+export interface ButtonProps {
   theme?: ButtonTheme;
   size?: ButtonSize;
-  type?: 'button' | 'submit' | 'reset';
+  type?: ButtonType;
   disabled?: boolean;
   href?: string;
-  onClick: (props: any) => void;
+  onClick?: (e: MouseEvent<any>) => void;
+  children: ReactNode;
+  isBlock?: boolean;
 }
 
-const Button: React.FC<Button> = ({ theme, size, type, href, ...props }) => {
+const Button = ({
+  theme,
+  size,
+  type,
+  href,
+  isBlock,
+  ...props
+}: ButtonProps) => {
   const Comp = href ? 'a' : 'button';
+  const classes = cn(
+    css.root,
+    css[`theme-${theme}`],
+    css[`size-${size}`],
+    isBlock && css.block,
+  );
   return (
-    <Comp
-      type={type}
-      {...href && { href }}
-      className={cn(
-        css.root,
-        styleKey(`theme-${theme}`),
-        styleKey(`size-${size}`),
-      )}
-      {...props}
-    />
+    <Comp type={type} {...href && { href }} className={classes} {...props} />
   );
 };
 

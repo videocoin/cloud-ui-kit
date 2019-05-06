@@ -1,21 +1,26 @@
-import * as React from 'react';
+import React, {
+  FormEvent,
+  FocusEvent,
+  InputHTMLAttributes,
+  useRef,
+  useState,
+  useEffect,
+} from 'react';
 import cn from 'classnames';
 import css from './Input.module.scss';
-import { useRef, useState, useEffect } from 'react';
 import NotchedOutline from './NotchedOutline';
 import Icon from '../Icon/Icon';
 
-export interface InputInterface
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   value: string;
-  onChange: (event: React.FormEvent<HTMLInputElement>) => void;
-  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onChange: (event: FormEvent<HTMLInputElement>) => void;
+  onFocus?: (event: FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
   error?: string;
 }
 
-const Input: React.FC<InputInterface> = ({
+const Input = ({
   label,
   disabled,
   onFocus,
@@ -23,16 +28,16 @@ const Input: React.FC<InputInterface> = ({
   value,
   error,
   ...props
-}) => {
+}: InputProps) => {
   const labelRef = useRef<HTMLDivElement>(null);
   const [focused, setFocused] = useState(Boolean(value));
   const [labelWidth, setLabelWidth] = useState(0);
 
-  const onFocusHandler = (e: React.FocusEvent<HTMLInputElement>): void => {
+  const onFocusHandler = (e: FocusEvent<HTMLInputElement>): void => {
     setFocused(true);
     onFocus && onFocus(e);
   };
-  const onBlurHandler = (e: React.FocusEvent<HTMLInputElement>): void => {
+  const onBlurHandler = (e: FocusEvent<HTMLInputElement>): void => {
     setFocused(false);
     onBlur && onBlur(e);
   };
@@ -79,7 +84,7 @@ const Input: React.FC<InputInterface> = ({
       />
       {error && (
         <div className={css.errorIcon}>
-          <Icon name="empty" />
+          <Icon name="warn" />
         </div>
       )}
     </label>

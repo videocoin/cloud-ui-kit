@@ -1,20 +1,20 @@
-import * as React from 'react';
+import React from 'react';
 import cn from 'classnames';
 import css from './Input.module.scss';
 
-interface NotchedOutline {
+export interface NotchedOutlineProps {
   notched: boolean;
   labelWidth: number;
   filled: boolean;
   error: boolean;
 }
 
-const NotchedOutline: React.FC<NotchedOutline> = ({
+const NotchedOutline = ({
   notched,
   labelWidth,
   filled,
   error,
-}) => {
+}: NotchedOutlineProps) => {
   const classes = {
     [css.outline]: true,
     [css.notched]: notched,

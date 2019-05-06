@@ -1,27 +1,21 @@
-import * as React from 'react';
-import { useState } from 'react';
+import React, { ChangeEventHandler, ReactNode, useState } from 'react';
 import css from './Checkbox.module.scss';
 
-interface Checkbox {
+export interface CheckboxProps {
   defaultChecked: boolean;
   onChange: (checked: boolean) => void;
+  children: ReactNode;
 }
 
-const Checkbox: React.FC<Checkbox> = ({
-  defaultChecked,
-  onChange,
-  children,
-}) => {
+const Checkbox = ({ defaultChecked, onChange, children }: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState(defaultChecked);
-  const onChangeHandle = async (
-    e: React.ChangeEvent<HTMLInputElement>,
-  ): Promise<any> => {
-    const { target } = e;
-    setIsChecked(target.checked);
+  const onChangeHandle: ChangeEventHandler<HTMLInputElement> = async e => {
+    const { currentTarget } = e;
+    setIsChecked(currentTarget.checked);
     try {
-      await onChange(target.checked);
+      await onChange(currentTarget.checked);
     } catch (e) {
-      setIsChecked(!target.checked);
+      setIsChecked(!currentTarget.checked);
       throw e;
     }
   };
@@ -37,10 +31,6 @@ const Checkbox: React.FC<Checkbox> = ({
       <div className={css.label}>{children}</div>
     </label>
   );
-};
-
-Checkbox.defaultProps = {
-  defaultChecked: false,
 };
 
 export default Checkbox;

@@ -1,27 +1,28 @@
-import * as React from 'react';
+import React, { ChangeEventHandler, ReactNode, useState } from 'react';
 import cn from 'classnames';
 import { RadioContextProvider } from './RadioContext';
-import { useState } from 'react';
+import RadioBtn from './RadioBtn';
 import css from './Radio.module.scss';
 
-interface RadioGroupInterface {
+export interface RadioGroupProps {
   defaultSelected?: string;
   name: string;
   onChange: (value: string) => void;
   disabled?: boolean;
   direction?: 'horizontal' | 'vertical';
+  children: ReactNode;
 }
 
-const RadioGroup: React.FC<RadioGroupInterface> = ({
+const RadioGroup = ({
   defaultSelected,
   name,
   onChange,
   disabled = false,
   children,
   direction = 'vertical',
-}) => {
+}: RadioGroupProps) => {
   const [selected, setSelected] = useState(defaultSelected);
-  const onChangeHandle = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChangeHandle: ChangeEventHandler<HTMLInputElement> = e => {
     const prevSelected = selected;
     setSelected(e.target.value);
     try {
@@ -45,5 +46,7 @@ RadioGroup.defaultProps = {
   direction: 'vertical',
   disabled: false,
 };
+
+RadioGroup.RadioBtn = RadioBtn;
 
 export default RadioGroup;

@@ -1,0 +1,138 @@
+@import '../../styles/vars';
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 8px);
+  margin: 0 -4px;
+}
+
+.item {
+  margin: 0;
+  flex-grow: 0;
+  padding: 4px;
+  &.grid-xs-true {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  &.grid-xs-auto {
+    flex-basis: auto;
+    flex-grow: 0;
+    max-width: none;
+  }
+  $i: 1;
+  @while $i <= $num-cols {
+    $perc: percentage($i / $num-cols);
+    &.grid-xs-#{$i} {
+      max-width: $perc;
+      flex-grow: 0;
+      flex-basis: $perc;
+    }
+    $i: $i + 1;
+  }
+}
+
+.zeroMinWidth {
+  min-width: 0;
+}
+
+/* Styles applied to the root element if `direction="column"`. */
+.direction-xs-column {
+  flex-direction: column;
+}
+
+/* Styles applied to the root element if `direction="column-reverse"`. */
+.direction-xs-column-reverse {
+  flex-direction: column-reverse;
+}
+
+/* Styles applied to the root element if `direction="rwo-reverse"`. */
+.direction-xs-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Styles applied to the root element if `wrap="nowrap"`. */
+.wrap-xs-nowrap {
+  flex-wrap: nowrap;
+}
+
+/* Styles applied to the root element if `wrap="reverse"`. */
+.wrap-xs-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* Styles applied to the root element if `alignItems="center"`. */
+.align-items-xs-center {
+  align-items: center;
+}
+
+/* Styles applied to the root element if `alignItems="center"`. */
+.align-items-xs-center {
+  align-items: center;
+}
+
+/* Styles applied to the root element if `alignItems="flex-start"`. */
+.align-items-xs-flex-start {
+  align-items: flex-start;
+}
+
+/* Styles applied to the root element if `alignItems="flex-end"`. */
+.align-items-xs-flex-end {
+  align-items: flex-end;
+}
+
+/* Styles applied to the root element if `alignItems="baseline"`. */
+.align-items-xs-baseline {
+  align-items: baseline;
+}
+
+/* Styles applied to the root element if `alignContent="center"`. */
+.align-content-xs-center {
+  align-content: center;
+}
+
+/* Styles applied to the root element if `alignContent="flex-start"`. */
+.align-content-xs-flex-start {
+  align-content: flex-start;
+}
+
+/* Styles applied to the root element if `alignContent="flex-end"`. */
+.align-content-xs-flex-end {
+  align-content: flex-end;
+}
+
+/* Styles applied to the root element if `alignContent="space-between"`. */
+.align-content-xs-space-between {
+  align-content: space-between;
+}
+
+/* Styles applied to the root element if `alignContent="space-around"`. */
+.align-content-xs-space-around {
+  align-content: space-around;
+}
+
+/* Styles applied to the root element if `justify="center"`. */
+.justify-xs-center {
+  justify-content: center;
+}
+
+/* Styles applied to the root element if `justify="flex-end"`. */
+.justify-xs-flex-end {
+  justify-content: flex-end;
+}
+
+/* Styles applied to the root element if `justify="space-between"`. */
+.justify-xs-space-between {
+  justify-content: space-between;
+}
+
+/* Styles applied to the root element if `justify="space-around"`. */
+.justify-xs-space-around {
+  justify-content: space-around;
+}
+
+/* Styles applied to the root element if `justify="space-evenly"`. */
+.justify-xs-space-evenly {
+  justify-content: space-evenly;
+}
