@@ -10,18 +10,23 @@ const ModalStory = () => {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open modal</Button>
-      <div id="modal-root" />
       <Modal
         isOpen={isOpen}
         close={() => setIsOpen(false)}
-        header="Popup title"
+        header={() => (
+          <Typography theme="white" type="subtitle">
+            Popup title
+          </Typography>
+        )}
       >
-        <Typography theme="light" type="bodyAlt">
-          Modal body
-        </Typography>
+        <div style={{ width: 430 }}>
+          <Typography theme="light" type="bodyAlt">
+            Modal body
+          </Typography>
+        </div>
       </Modal>
     </>
   );
 };
 
-storiesOf('Components|Modal', module).add('basic', () => <ModalStory />);
+storiesOf('Molecules|Modal', module).add('basic', () => <ModalStory />);

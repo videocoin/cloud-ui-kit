@@ -1,0 +1,18 @@
+import { ReactNode } from 'react';
+export interface RadioGroupProps {
+    defaultSelected?: string;
+    name: string;
+    onChange: (value: string) => void;
+    disabled?: boolean;
+    direction?: 'horizontal' | 'vertical';
+    children: ReactNode;
+}
+declare const RadioGroup: {
+    ({ defaultSelected, name, onChange, disabled, children, direction, }: RadioGroupProps): JSX.Element;
+    defaultProps: {
+        direction: string;
+        disabled: boolean;
+    };
+    RadioBtn: ({ value, children, disabled }: import("./RadioBtn").RadioBtnProps) => JSX.Element;
+};
+export default RadioGroup;

@@ -5,7 +5,7 @@ import RadioGroup from './Radio';
 
 const { RadioBtn } = RadioGroup;
 
-storiesOf('Forms|Radio', module)
+storiesOf('Atoms|Radio', module)
   .add('vertical', () => (
     <RadioGroup name="radio" onChange={action('change')}>
       <RadioBtn value="fruits">Fruits</RadioBtn>

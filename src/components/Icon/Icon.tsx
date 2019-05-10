@@ -7,10 +7,13 @@ const ICONS: { [name: string]: FC<SVGProps<SVGElement>> } = {
   close,
 };
 
+export type IconName = 'warn' | 'close';
+
 export interface IconProps {
-  name: string;
+  name: IconName;
   width?: number;
   height?: number;
+  children?: never;
 }
 
 const Icon = ({ width, height, name }: IconProps) => {

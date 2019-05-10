@@ -1,6 +1,7 @@
 import Button from './components/Button/Button';
 import Card from './components/Card/Card';
 import Checkbox from './components/Checkbox/Checkbox';
+import FieldAction from './components/FieldAction/FieldAction';
 import Grid from './components/Grid/Grid';
 import Icon from './components/Icon/Icon';
 import Input from './components/Input/Input';
@@ -13,6 +14,7 @@ export {
   Button,
   Card,
   Checkbox,
+  FieldAction,
   Grid,
   Icon,
   Input,
@@ -26,6 +28,7 @@ export default {
   Button,
   Card,
   Checkbox,
+  FieldAction,
   Grid,
   Icon,
   Input,

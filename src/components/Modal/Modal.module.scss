@@ -1,7 +1,6 @@
 @import '../../styles/vars';
 
 .modal {
-  width: 530px;
   border-radius: 24px;
   margin: auto;
   z-index: 1;
@@ -13,6 +12,9 @@
   border-radius: 24px 24px 0 0;
   padding: 20px 48px;
   color: rgba($white, 0.64);
+  &:empty {
+    padding: 18px 48px;
+  }
 }
 
 .body {

@@ -25,7 +25,7 @@
   ],
   "exclude": [
     "node_modules",
-    "*.stories.tsx",
+    "**/*.stories.tsx",
     "build",
     "dist",
     "example",

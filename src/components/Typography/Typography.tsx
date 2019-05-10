@@ -19,22 +19,27 @@ export type TypographyType =
 
 export type TypographyTag = 'div' | 'span' | 'p';
 
-export type TypographyTheme = 'light' | 'dark' | 'white' | 'primary';
+export type TypographyTheme = 'light' | 'dark' | 'white' | 'primary' | 'custom';
 
 export interface TypographyProps {
   type?: TypographyType;
   theme?: TypographyTheme;
   tagName?: TypographyTag;
   children: ReactNode;
+  className?: string;
 }
 
 const Typography = ({
   tagName: Comp = 'div',
   type = 'body',
   theme = 'light',
+  className,
   ...props
 }: TypographyProps) => (
-  <Comp className={cn(css.root, css[type], theme && css[theme])} {...props} />
+  <Comp
+    className={cn(css.root, css[type], theme && css[theme], className)}
+    {...props}
+  />
 );
 
 Typography.defaultProps = {

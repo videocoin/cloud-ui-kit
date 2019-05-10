@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Typography from './Typography';
 
-storiesOf('Interface|Typography', module)
+storiesOf('Foundations|Typography', module)
   .add('light', () => (
     <div>
       <Typography type="display1">Display 1</Typography>

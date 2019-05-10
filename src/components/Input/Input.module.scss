@@ -59,7 +59,7 @@
   &:not(:focus).error,
   &.error {
     ~ .label {
-      color: $error;
+      color: $pink-w1;
     }
   }
 }
@@ -93,13 +93,13 @@
   }
   &.error {
     .leading {
-      border-color: $error;
+      border-color: $pink-w1;
     }
     .notch {
-      border-color: $error;
+      border-color: $pink-w1;
     }
     .trailing {
-      border-color: $error;
+      border-color: $pink-w1;
     }
   }
 }
@@ -160,21 +160,10 @@
     -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.errorIcon {
-  background: $errorIcon;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  width: 56px;
-  height: 100%;
-  position: absolute;
-  right: 0;
-}
-
 @-webkit-keyframes autofill {
   to {
     color: #fff;
     background: transparent;
+    font-family: 'Rubik', sans-serif;
   }
 }

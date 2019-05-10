@@ -7,6 +7,7 @@ export interface NotchedOutlineProps {
   labelWidth: number;
   filled: boolean;
   error: boolean;
+  children?: never;
 }
 
 const NotchedOutline = ({

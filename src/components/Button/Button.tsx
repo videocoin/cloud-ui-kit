@@ -2,7 +2,12 @@ import React, { ReactNode, MouseEvent } from 'react';
 import cn from 'classnames';
 import css from './Button.module.scss';
 
-type ButtonTheme = 'primary' | 'secondary' | 'white' | 'ghost';
+type ButtonTheme =
+  | 'primary'
+  | 'secondary'
+  | 'white'
+  | 'ghost-primary'
+  | 'ghost-secondary';
 type ButtonSize = 'xs' | 'sm' | 'md' | 'lg';
 type ButtonType = 'submit' | 'button' | 'reset';
 

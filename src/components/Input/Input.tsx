@@ -9,7 +9,6 @@ import React, {
 import cn from 'classnames';
 import css from './Input.module.scss';
 import NotchedOutline from './NotchedOutline';
-import Icon from '../Icon/Icon';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -17,7 +16,9 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   onChange: (event: FormEvent<HTMLInputElement>) => void;
   onFocus?: (event: FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
-  error?: string;
+  error?: boolean;
+  postfix?: () => void;
+  children?: never;
 }
 
 const Input = ({
@@ -26,7 +27,8 @@ const Input = ({
   onFocus,
   onBlur,
   value,
-  error,
+  error = false,
+  postfix,
   ...props
 }: InputProps) => {
   const labelRef = useRef<HTMLDivElement>(null);
@@ -58,7 +60,7 @@ const Input = ({
   const inputClasses = {
     [css.input]: true,
     [css.active]: Boolean(value),
-    [css.error]: Boolean(error),
+    [css.error]: error,
   };
 
   return (
@@ -77,22 +79,19 @@ const Input = ({
         </div>
       )}
       <NotchedOutline
-        error={Boolean(error)}
+        error={error}
         notched={focused}
         filled={Boolean(value)}
         labelWidth={labelWidth}
       />
-      {error && (
-        <div className={css.errorIcon}>
-          <Icon name="warn" />
-        </div>
-      )}
+      {postfix && postfix()}
     </label>
   );
 };
 
 Input.defaultProps = {
   disabled: false,
+  error: false,
 };
 
 export default Input;

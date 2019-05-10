@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Button from './Button';
 
-storiesOf('Interface|Button', module)
+storiesOf('Atoms|Buttons', module)
   .add('basic', () => (
     <div>
       <Button theme="primary" onClick={action('clicked')}>
@@ -15,8 +15,11 @@ storiesOf('Interface|Button', module)
       <Button theme="white" onClick={action('clicked')}>
         White
       </Button>
-      <Button theme="ghost" onClick={action('clicked')}>
-        Ghost
+      <Button theme="ghost-primary" onClick={action('clicked')}>
+        Ghost primary
+      </Button>
+      <Button theme="ghost-secondary" onClick={action('clicked')}>
+        Ghost secondary
       </Button>
     </div>
   ))

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Logo from './Logo';
 
-storiesOf('Interface|Logo', module)
+storiesOf('Foundations|Logos', module)
   .add('color white', () => (
     <div>
       <Logo type="colorWhite" width={170} />
