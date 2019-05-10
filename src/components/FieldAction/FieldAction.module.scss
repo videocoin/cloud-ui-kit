@@ -6,26 +6,27 @@
   justify-content: center;
   border-radius: 4px;
   width: 56px;
-  height: 100%;
-  position: absolute;
-  right: 0;
+  height: 56px;
   &.orange {
-    background: $orange;
+    background: $sunkissed-orange;
   }
   &.violet {
-    background: $violet;
+    background: $violet-sky;
   }
   &.pink {
-    background: $pink;
+    background: $impossibly-pink;
   }
   &.green {
-    background: $green;
+    background: $minty-green;
   }
   &.grey {
-    background: $grey-w3;
+    background: $grey-dawn-w3;
   }
   &.white {
-    background: $white-b1;
+    background: $perfect-white-b1;
+    svg {
+      fill: $base;
+    }
   }
   &:hover {
     & + .tooltip {

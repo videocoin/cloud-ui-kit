@@ -1,4 +1,3 @@
-/// <reference types="react" />
 export declare type LogoType = 'black' | 'white' | 'colorBlack' | 'colorWhite';
 export interface LogoProps {
     type?: LogoType;
@@ -6,11 +5,10 @@ export interface LogoProps {
     width?: number;
     height?: number;
 }
-declare const Logo: {
+export declare const Logo: {
     ({ type, short, width, height }: LogoProps): JSX.Element;
     defaultProps: {
         type: string;
         short: boolean;
     };
 };
-export default Logo;

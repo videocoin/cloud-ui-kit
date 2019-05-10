@@ -1,7 +1,8 @@
 import { ReactNode, MouseEvent } from 'react';
-declare type ButtonTheme = 'primary' | 'secondary' | 'white' | 'ghost-primary' | 'ghost-secondary';
-declare type ButtonSize = 'xs' | 'sm' | 'md' | 'lg';
-declare type ButtonType = 'submit' | 'button' | 'reset';
+import { IconName } from '../Icon/Icon';
+export declare type ButtonTheme = 'sunkissed' | 'violet-sky' | 'perfect-white' | 'minimal' | 'minimal-sunkissed';
+export declare type ButtonSize = 'xs' | 'sm' | 'md' | 'lg';
+export declare type ButtonType = 'submit' | 'button' | 'reset';
 export interface ButtonProps {
     theme?: ButtonTheme;
     size?: ButtonSize;
@@ -10,10 +11,12 @@ export interface ButtonProps {
     href?: string;
     onClick?: (e: MouseEvent<any>) => void;
     children: ReactNode;
-    isBlock?: boolean;
+    block?: boolean;
+    loading?: boolean;
+    icon?: IconName;
 }
-declare const Button: {
-    ({ theme, size, type, href, isBlock, ...props }: ButtonProps): JSX.Element;
+export declare const Button: {
+    ({ theme, size, type, href, block, loading, children, icon, disabled, ...props }: ButtonProps): JSX.Element;
     defaultProps: {
         theme: string;
         size: string;
@@ -22,4 +25,3 @@ declare const Button: {
         disabled: boolean;
     };
 };
-export default Button;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Card from './Card';
-import Typography from '../Typography/Typography';
+import { Card } from './Card';
+import { Typography } from '../Typography/Typography';
 
 storiesOf('Atoms|Card', module).add('basic', () => (
   <Card>

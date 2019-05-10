@@ -9,11 +9,10 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     postfix?: () => void;
     children?: never;
 }
-declare const Input: {
+export declare const Input: {
     ({ label, disabled, onFocus, onBlur, value, error, postfix, ...props }: InputProps): JSX.Element;
     defaultProps: {
         disabled: boolean;
         error: boolean;
     };
 };
-export default Input;

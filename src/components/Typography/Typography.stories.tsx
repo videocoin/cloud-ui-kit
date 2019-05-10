@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Typography from './Typography';
+import { Typography } from './Typography';
 
 storiesOf('Foundations|Typography', module)
   .add('light', () => (

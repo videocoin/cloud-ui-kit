@@ -8,7 +8,7 @@ export interface OverlayProps {
   onClick: () => void;
 }
 
-const Overlay = ({ active, children, onClick }: OverlayProps) => {
+export const Overlay = ({ active, children, onClick }: OverlayProps) => {
   const handleInnerClick = (event: SyntheticEvent<HTMLDivElement>) => {
     event.stopPropagation();
   };
@@ -30,5 +30,3 @@ const Overlay = ({ active, children, onClick }: OverlayProps) => {
     </CSSTransition>
   );
 };
-
-export default Overlay;

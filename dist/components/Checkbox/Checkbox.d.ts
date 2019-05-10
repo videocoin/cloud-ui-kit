@@ -4,5 +4,4 @@ export interface CheckboxProps {
     onChange: (event: FormEvent<HTMLInputElement>) => void;
     children: ReactNode;
 }
-declare const Checkbox: ({ checked, onChange, children, ...props }: CheckboxProps) => JSX.Element;
-export default Checkbox;
+export declare const Checkbox: ({ checked, onChange, children, ...props }: CheckboxProps) => JSX.Element;

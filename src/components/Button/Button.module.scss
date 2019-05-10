@@ -1,7 +1,13 @@
 @import '../../styles/vars';
 
+.wrap {
+  position: relative;
+  display: inline-block;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
 .root {
-  border: 2px solid transparent;
   border-radius: 28px;
   cursor: pointer;
   font-size: 14px;
@@ -9,61 +15,156 @@
   letter-spacing: 0.07px;
   outline: none;
   text-transform: uppercase;
+  border: none;
   &:hover {
     background-image: radial-gradient(
       at 50% 155%,
-      rgba($white, 0.15) 0%,
-      rgba($white, 0) 100%
+      rgba($perfect-white, 0.15) 0%,
+      rgba($perfect-white, 0) 100%
     );
-    color: rgba($base, 0.76);
+    .inner {
+      opacity: 0.76;
+    }
   }
   &:disabled {
-    background-color: rgba(#eee3ff, 0.1);
-    border-color: rgba($white, 0.18);
-    color: rgba(#e1ccff, 0.22);
+    background-color: $violet-sky-b3;
+    .inner {
+      opacity: 0.24;
+    }
+    color: $light;
     pointer-events: none;
+    svg {
+      fill: $perfect-white-b4;
+    }
   }
 }
 
 .size-md {
   font-size: 14px;
   height: 48px;
-  padding: 14px 36px;
+  padding: 0 36px;
 }
 
-.theme-primary {
+.theme-sunkissed {
   box-shadow: 0 12px 28px rgba(12, 4, 23, 0.74);
-  background-color: $orange;
-}
-
-.theme-secondary {
-  box-shadow: 0 12px 28px rgba(12, 4, 23, 0.74);
-  background-color: $violet;
-}
-
-.theme-white {
-  box-shadow: 0 12px 28px rgba(12, 4, 23, 0.74);
-  background-color: $white;
-}
-
-.theme-ghost-primary {
-  background-color: transparent;
-  color: $primary;
-  &:hover {
-    background: transparent;
-    color: rgba($primary, 0.76);
+  background-color: $sunkissed-orange;
+  svg {
+    fill: $grey-dawn;
   }
 }
 
-.theme-ghost-secondary {
+.theme-violet-sky {
+  box-shadow: 0 12px 28px rgba(12, 4, 23, 0.74);
+  background-color: $violet-sky-w1;
+  svg {
+    fill: $grey-dawn;
+  }
+}
+
+.theme-perfect-white {
+  box-shadow: 0 12px 28px rgba(12, 4, 23, 0.74);
+  background-color: $perfect-white-b1;
+  svg {
+    fill: $grey-dawn;
+  }
+}
+
+.theme-minimal-sunkissed {
   background-color: transparent;
-  color: $light;
+  color: $sunkissed-orange;
+  transition: color 0.15s ease-in-out;
+  svg {
+    fill: $sunkissed-orange;
+  }
+  &:disabled,
   &:hover {
     background: transparent;
-    color: rgba($light, 0.76);
+  }
+}
+
+.theme-minimal {
+  background-color: transparent;
+  color: $light;
+  transition: color 0.15s ease-in-out;
+  svg {
+    fill: $perfect-white-b1;
+  }
+  &:disabled,
+  &:hover {
+    background: transparent;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    margin-right: 16px;
   }
 }
 
 .block {
+  display: block;
   width: 100%;
+}
+
+.loadingBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.15s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  &::before {
+    content: '';
+    display: block;
+    will-change: transform;
+    transform: translateZ(0) skewX(-10deg) translateX(-100%);
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: calc(100% + 10px);
+    height: 100%;
+    background: $violet-sky;
+    animation: loader 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.3s;
+    z-index: 1;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $perfect-white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 28px;
+    overflow: hidden;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: translateZ(0) skewX(-15deg) translateX(-100%);
+    animation-timing-function: cubic-bezier(0.64, 0, 0.25, 1);
+  }
+  40% {
+    transform: translateZ(0) skewX(-15deg) translateX(0);
+  }
+  60% {
+    animation-timing-function: cubic-bezier(0.64, 0, 0.25, 1);
+    transform: translateZ(0) skewX(-15deg) translateX(0);
+  }
+  100% {
+    transform: translateZ(0) skewX(-15deg) translateX(100%);
+  }
 }

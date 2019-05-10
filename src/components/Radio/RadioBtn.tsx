@@ -8,7 +8,7 @@ export interface RadioBtnProps {
   children: ReactNode | string;
 }
 
-const Radio = ({ value, children, disabled }: RadioBtnProps) => {
+export const RadioBtn = ({ value, children, disabled }: RadioBtnProps) => {
   const { selected, onChange, name, disabled: disabledGroup } = useContext(
     RadioContext,
   );
@@ -29,5 +29,3 @@ const Radio = ({ value, children, disabled }: RadioBtnProps) => {
     </label>
   );
 };
-
-export default Radio;

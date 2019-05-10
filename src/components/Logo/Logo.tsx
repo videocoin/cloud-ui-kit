@@ -28,7 +28,7 @@ export interface LogoProps {
   height?: number;
 }
 
-const Logo = ({ type, short, width, height }: LogoProps) => {
+export const Logo = ({ type, short, width, height }: LogoProps) => {
   const Comp = LOGOS[`${type}${short ? 's' : ''}`];
   return <Comp {...width && { width }} {...height && { height }} />;
 };
@@ -37,5 +37,3 @@ Logo.defaultProps = {
   type: 'colorBlack',
   short: false,
 };
-
-export default Logo;

@@ -1,7 +1,7 @@
 import React, { FormEvent, useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import Input from './Input';
-import FieldAction from '../FieldAction/FieldAction';
+import { Input } from './Input';
+import { FieldAction } from '../FieldAction/FieldAction';
 
 const InputStory = () => {
   const [value, setValue] = useState('');
@@ -34,7 +34,7 @@ storiesOf('Atoms|Input', module)
           error
           onChange={() => false}
           postfix={() => (
-            <FieldAction color="pink" icon="warn">
+            <FieldAction color="pink" icon="incomplete">
               Password must be more than 8 characters and contain both numbers
               and letters
             </FieldAction>

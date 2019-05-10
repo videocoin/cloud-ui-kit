@@ -1,58 +1,9 @@
-// Colors
-$base: #0c0417;
-$orange: #fd9369;
-$orange-w4: #ffe4d9;
-$orange-w3: #ffd2c0;
-$orange-w2: #ffc0a7;
-$orange-w1: #ffab8b;
-$orange-b1: #f57b4b;
-$orange-b2: #df6839;
-$orange-b3: #c75223;
-$orange-b4: #9d3c15;
-$pink-w4: #ffd1de;
-$pink-w3: #ffbacd;
-$pink-w2: #ff88a8;
-$pink-w1: #ff618b;
-$pink: #f53568;
-$pink-b1: #cb2954;
-$pink-b2: #9f2041;
-$pink-b3: #7e1632;
-$pink-b4: #670f26;
-$violet: #7234c8;
-$violet-w4: #eee3ff;
-$violet-w3: #d3b7fb;
-$violet-w2: #b280f9;
-$violet-w1: #9056e4;
-$violet-b1: #4e238e;
-$violet-b2: #351661;
-$violet-b3: #290f4d;
-$violet-b4: #1c0937;
-$green-w4: #d0ffeb;
-$green-w3: #adfbda;
-$green-w2: #82f7c5;
-$green-w1: #53eaaa;
-$green: #37cb8d;
-$green-b1: #2bb47a;
-$green-b2: #219966;
-$green-b3: #1b7c53;
-$green-b4: #13593b;
-$grey-w4: #7f67a0;
-$grey-w3: #5f4681;
-$grey-w2: #3f2a5d;
-$grey-w1: #281741;
-$grey: #1b0d2f;
-$grey-b1: #140824;
-$grey-b2: #0c0417;
-$white: #fff;
-$white-b1: #efeaf6;
-$white-b2: #dad0e8;
-$white-b3: #baaccf;
-$white-b4: #a38fc0;
+@import 'typography';
+@import 'colors';
 
 // Typography
 $light: #e1ccff;
 $dark: $base;
-$primary: $orange;
 $lightTitle: #b7a5d2;
 $lightSmallTitle: #ccb1f2;
 $lightSubtitle: #62517a;
@@ -64,36 +15,14 @@ $lightSmallBodyAlt: rgba(#e1ccff, 0.76);
 $lightCaption: rgba(#b8a8ce, 0.72);
 
 //
-$radioBox: $grey-w2;
-$inputBorder: $white-b4;
-$inputFocusBorder: $violet-w3;
-$caretColor: $violet-w2;
+$radioBox: $grey-dawn-w2;
+$inputBorder: $perfect-white-b4;
+$inputFocusBorder: $violet-sky-w3;
+$caretColor: $violet-sky-w2;
 
-$error: $pink-w1;
+$error: $impossibly-pink-b1;
 
 $modalHeader: #4b1f8c;
 
 // Fonts
 $baseFont: 'Rubik', sans-serif;
-
-// Media Query Ranges
-$small-screen-up: 601px !default;
-$medium-screen-up: 993px !default;
-$large-screen-up: 1201px !default;
-$small-screen: 600px !default;
-$medium-screen: 992px !default;
-$large-screen: 1200px !default;
-
-$medium-and-up: 'only screen and (min-width : #{$small-screen-up})' !default;
-$large-and-up: 'only screen and (min-width : #{$medium-screen-up})' !default;
-$extra-large-and-up: 'only screen and (min-width : #{$large-screen-up})' !default;
-$small-and-down: 'only screen and (max-width : #{$small-screen})' !default;
-$medium-and-down: 'only screen and (max-width : #{$medium-screen})' !default;
-$medium-only: 'only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})' !default;
-
-// Grid
-
-$num-cols: 12 !default;
-$gutter-width: 1.5rem !default;
-$element-top-margin: $gutter-width/3 !default;
-$element-bottom-margin: ($gutter-width * 2)/3 !default;

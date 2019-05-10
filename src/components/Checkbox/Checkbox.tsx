@@ -12,7 +12,7 @@ export interface CheckboxProps {
   children: ReactNode;
 }
 
-const Checkbox = ({
+export const Checkbox = ({
   checked = false,
   onChange,
   children,
@@ -43,5 +43,3 @@ const Checkbox = ({
     </label>
   );
 };
-
-export default Checkbox;

@@ -4,6 +4,6 @@ export interface FieldActionProps {
     color: 'orange' | 'violet' | 'pink' | 'green' | 'grey' | 'white';
     icon: IconName;
     children?: ReactNode;
+    className?: string;
 }
-declare const FieldAction: ({ color, icon, children }: FieldActionProps) => JSX.Element;
-export default FieldAction;
+export declare const FieldAction: ({ color, icon, children, className, }: FieldActionProps) => JSX.Element;

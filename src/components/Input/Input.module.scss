@@ -25,7 +25,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: $white;
+  color: $perfect-white;
   caret-color: $caretColor;
   &:-webkit-autofill {
     -webkit-animation-name: autofill;
@@ -48,7 +48,7 @@
   }
   &:focus {
     ~ .label {
-      color: rgba($white, 0.87);
+      color: rgba($perfect-white, 0.87);
     }
   }
   &:not(:focus).active {
@@ -59,7 +59,7 @@
   &:not(:focus).error,
   &.error {
     ~ .label {
-      color: $pink-w1;
+      color: $impossibly-pink-w1;
     }
   }
 }
@@ -93,13 +93,13 @@
   }
   &.error {
     .leading {
-      border-color: $pink-w1;
+      border-color: $impossibly-pink-w1;
     }
     .notch {
-      border-color: $pink-w1;
+      border-color: $impossibly-pink-w1;
     }
     .trailing {
-      border-color: $pink-w1;
+      border-color: $impossibly-pink-w1;
     }
   }
 }

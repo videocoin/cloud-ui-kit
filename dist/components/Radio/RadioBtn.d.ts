@@ -4,5 +4,4 @@ export interface RadioBtnProps {
     disabled?: boolean;
     children: ReactNode | string;
 }
-declare const Radio: ({ value, children, disabled }: RadioBtnProps) => JSX.Element;
-export default Radio;
+export declare const RadioBtn: ({ value, children, disabled }: RadioBtnProps) => JSX.Element;

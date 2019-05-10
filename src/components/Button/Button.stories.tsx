@@ -1,53 +1,129 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Button from './Button';
+import { Button } from './Button';
+import { IconButton } from '../IconButton/IconButton';
 
 storiesOf('Atoms|Buttons', module)
   .add('basic', () => (
     <div>
-      <Button theme="primary" onClick={action('clicked')}>
-        Primary
+      <Button theme="sunkissed" onClick={action('clicked')}>
+        Sunkissed
       </Button>
-      <Button theme="secondary" onClick={action('clicked')}>
-        Secondary
+      <Button theme="violet-sky" onClick={action('clicked')}>
+        Violet Sky
       </Button>
-      <Button theme="white" onClick={action('clicked')}>
-        White
+      <Button theme="perfect-white" onClick={action('clicked')}>
+        Perfect White
       </Button>
-      <Button theme="ghost-primary" onClick={action('clicked')}>
-        Ghost primary
+      <Button theme="minimal" onClick={action('clicked')}>
+        minimal
       </Button>
-      <Button theme="ghost-secondary" onClick={action('clicked')}>
-        Ghost secondary
+      <Button theme="minimal-sunkissed" onClick={action('clicked')}>
+        Minimal Sunkissed
       </Button>
     </div>
   ))
   .add('disabled', () => (
     <div>
-      <Button disabled theme="primary" onClick={action('clicked')}>
-        Primary
+      <Button disabled theme="sunkissed" onClick={action('clicked')}>
+        Sunkissed
       </Button>
-      <Button disabled theme="secondary" onClick={action('clicked')}>
-        Secondary
+      <Button disabled theme="violet-sky" onClick={action('clicked')}>
+        Violet Sky
       </Button>
-      <Button disabled theme="white" onClick={action('clicked')}>
-        White
+      <Button disabled theme="perfect-white" onClick={action('clicked')}>
+        Perfect White
+      </Button>
+      <Button disabled theme="minimal" onClick={action('clicked')}>
+        minimal
+      </Button>
+      <Button disabled theme="minimal-sunkissed" onClick={action('clicked')}>
+        Minimal Sunkissed
       </Button>
     </div>
   ))
-  .add('block', () => (
+  .add('loading', () => (
+    <Button loading theme="sunkissed" onClick={action('clicked')}>
+      Primary
+    </Button>
+  ))
+  .add('with icon', () => (
     <div>
-      <Button isBlock theme="primary" onClick={action('clicked')}>
-        Primary
-      </Button>
-      <div style={{ marginBottom: 20 }} />
-      <Button isBlock theme="secondary" onClick={action('clicked')}>
-        Secondary
-      </Button>
-      <div style={{ marginBottom: 20 }} />
-      <Button isBlock theme="white" onClick={action('clicked')}>
-        White
-      </Button>
+      <IconButton
+        icon="incomplete"
+        theme="sunkissed"
+        onClick={action('clicked')}
+      >
+        Sunkissed
+      </IconButton>
+      <IconButton
+        icon="incomplete"
+        theme="violet-sky"
+        onClick={action('clicked')}
+      >
+        Violet Sky
+      </IconButton>
+      <IconButton
+        icon="incomplete"
+        theme="perfect-white"
+        onClick={action('clicked')}
+      >
+        Perfect White
+      </IconButton>
+      <IconButton icon="incomplete" theme="minimal" onClick={action('clicked')}>
+        Minimal
+      </IconButton>
+      <IconButton
+        icon="incomplete"
+        theme="minimal-sunkissed"
+        onClick={action('clicked')}
+      >
+        Minimal Sunkissed
+      </IconButton>
+    </div>
+  ))
+  .add('with icon disabled', () => (
+    <div>
+      <IconButton
+        disabled
+        icon="incomplete"
+        theme="sunkissed"
+        onClick={action('clicked')}
+      >
+        Sunkissed
+      </IconButton>
+      <IconButton
+        disabled
+        icon="incomplete"
+        theme="violet-sky"
+        onClick={action('clicked')}
+      >
+        Violet Sky
+      </IconButton>
+      <IconButton
+        disabled
+        icon="incomplete"
+        theme="perfect-white"
+        onClick={action('clicked')}
+      >
+        Perfect White
+      </IconButton>
+      <IconButton
+        disabled
+        icon="incomplete"
+        theme="minimal"
+        onClick={action('clicked')}
+      >
+        Minimal
+      </IconButton>
+      <IconButton
+        disabled
+        icon="incomplete"
+        theme="minimal-sunkissed"
+        onClick={action('clicked')}
+      >
+        Minimal Sunkissed
+      </IconButton>
     </div>
   ));

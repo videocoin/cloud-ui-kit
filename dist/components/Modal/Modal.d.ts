@@ -7,5 +7,4 @@ export interface ModalProps {
     shouldOverlayClose?: boolean;
     hideCloseButton?: boolean;
 }
-declare const Modal: ({ isOpen, close, header, children, shouldOverlayClose, hideCloseButton, }: ModalProps) => JSX.Element;
-export default Modal;
+export declare const Modal: ({ isOpen, close, header, children, shouldOverlayClose, hideCloseButton, }: ModalProps) => JSX.Element;

@@ -1,192 +1,135 @@
 @import '../../styles/vars';
 
 .display1 {
-  font-size: 92px;
-  font-weight: 300;
-  letter-spacing: -1.2px;
-  line-height: 96px;
-
+  @include display-1;
   &.light {
     color: $light;
   }
-
   &.dark {
     color: $dark;
   }
-
   &.white {
-    color: $white;
+    color: $perfect-white;
   }
-
   &.primary {
-    color: $primary;
+    color: $sunkissed-orange;
   }
 }
 
 .display2 {
-  font-size: 64px;
-  font-weight: 300;
-  letter-spacing: -0.6px;
-  line-height: 72px;
-
+  @include display-2;
   &.light {
     color: rgba($light, 0.87);
   }
-
   &.dark {
     color: rgba($dark, 0.87);
   }
-
   &.white {
-    color: rgba($white, 0.87);
+    color: rgba($perfect-white, 0.87);
   }
-
   &.primary {
-    color: rgba($primary, 0.87);
+    color: rgba($sunkissed-orange, 0.87);
   }
 }
 
 .display3 {
-  font-size: 48px;
-  font-weight: 300;
-  letter-spacing: -0.04px;
-  line-height: 56px;
-
+  @include display-3;
   &.light {
     color: rgba($light, 0.76);
   }
-
   &.dark {
     color: rgba($dark, 0.76);
   }
-
   &.white {
-    color: rgba($white, 0.76);
+    color: rgba($perfect-white, 0.76);
   }
-
   &.primary {
-    color: rgba($primary, 0.76);
+    color: rgba($sunkissed-orange, 0.76);
   }
 }
 
 .title {
-  font-size: 32px;
-  letter-spacing: -0.1px;
-  line-height: 40px;
-
+  @include title;
   &.light {
     color: $lightTitle;
   }
-
   &.dark {
     color: $dark;
   }
-
   &.white {
-    color: $white;
+    color: $perfect-white;
   }
-
   &.primary {
-    color: $primary;
+    color: $sunkissed-orange;
   }
 }
 
 .smallTitle {
-  font-size: 24px;
-  font-weight: bold;
-  left: 36px;
-  letter-spacing: 0.8px;
-
+  @include small-title;
   &.light {
     color: $lightSmallTitle;
   }
-
   &.dark {
     color: $dark;
   }
-
   &.white {
-    color: $white;
+    color: $perfect-white;
   }
-
   &.primary {
-    color: $primary;
+    color: $sunkissed-orange;
   }
 }
 
 .subtitle {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: -0.1px;
-  line-height: 32px;
-  text-transform: uppercase;
-
+  @include subtitle;
   &.light {
     color: $lightSubtitle;
   }
-
   &.dark {
     color: rgba($dark, 0.36);
   }
-
   &.white {
-    color: rgba($white, 0.36);
+    color: rgba($perfect-white, 0.36);
   }
-
   &.primary {
-    color: rgba($primary, 0.92);
+    color: rgba($sunkissed-orange, 0.92);
   }
 }
 
 .subtitleAlt {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: -0.1px;
-  line-height: 32px;
-
+  @include subtitle-alt;
   &.light {
     color: $lightSubtitleAlt;
   }
-
   &.dark {
     color: rgba($dark, 0.76);
   }
-
   &.white {
-    color: rgba($white, 0.76);
+    color: rgba($perfect-white, 0.76);
   }
-
   &.primary {
-    color: rgba($primary, 0.76);
+    color: rgba($sunkissed-orange, 0.76);
   }
 }
 
 .body {
-  letter-spacing: 0.12px;
-  line-height: 24px;
-
+  @include body;
   &.light {
     color: $lightBody;
   }
-
   &.dark {
     color: rgba($dark, 0.5);
   }
-
   &.white {
-    color: rgba($white, 0.94);
+    color: rgba($perfect-white, 0.94);
   }
-
   &.primary {
-    color: rgba($primary, 0.72);
+    color: rgba($sunkissed-orange, 0.72);
   }
 }
 
 .bodyAlt {
-  font-weight: 500;
-  letter-spacing: 0.12px;
-  line-height: 24px;
-
+  @include body-alt;
   &.light {
     color: $lightBodyAlt;
   }
@@ -196,99 +139,81 @@
   }
 
   &.white {
-    color: rgba($white, 0.94);
+    color: rgba($perfect-white, 0.94);
   }
 
   &.primary {
-    color: rgba($primary, 0.92);
+    color: rgba($sunkissed-orange, 0.92);
   }
 }
 
 .smallBody {
-  font-size: 14px;
-  letter-spacing: 0.28px;
-  line-height: 24px;
-
+  @include small-body;
   &.light {
     color: $lightSmallBody;
   }
-
   &.dark {
     color: rgba($dark, 0.56);
   }
-
   &.white {
-    color: rgba($white, 0.92);
+    color: rgba($perfect-white, 0.92);
   }
-
   &.primary {
-    color: rgba($primary, 0.72);
+    color: rgba($sunkissed-orange, 0.72);
   }
 }
 
 .smallBodyAlt {
-  font-size: 14px;
-  letter-spacing: 0.28px;
-  line-height: 24px;
-
+  @include small-body-alt;
   &.light {
     color: $lightSmallBodyAlt;
   }
-
   &.dark {
     color: rgba($dark, 0.76);
   }
-
   &.white {
-    color: rgba($white, 0.87);
+    color: rgba($perfect-white, 0.87);
   }
-
   &.primary {
-    color: rgba($primary, 0.82);
+    color: rgba($sunkissed-orange, 0.82);
   }
 }
 
 .caption {
-  font-size: 12px;
-  letter-spacing: 0.06px;
-  line-height: 20px;
-
+  @include caption;
   &.light {
     color: $lightCaption;
   }
-
   &.dark {
     color: rgba($dark, 0.5);
   }
-
   &.white {
-    color: rgba($white, 0.87);
+    color: rgba($perfect-white, 0.87);
   }
-
   &.primary {
-    color: rgba($primary, 0.72);
+    color: rgba($sunkissed-orange, 0.72);
   }
 }
 
 .button {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.07px;
-  text-transform: uppercase;
-
+  @include button;
   &.light {
     color: $light;
   }
-
   &.dark {
     color: $dark;
   }
-
   &.white {
-    color: rgba($white, 0.92);
+    color: rgba($perfect-white, 0.92);
   }
-
   &.primary {
-    color: $primary;
+    color: $sunkissed-orange;
+  }
+}
+
+$aligns: inherit, left, center, right, justify;
+@each $align in $aligns {
+  .align-#{$align} {
+    text-align: $align;
   }
 }

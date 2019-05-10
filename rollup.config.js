@@ -29,7 +29,9 @@ export default {
       modules: true,
     }),
     url(),
-    svgr(),
+    svgr({
+      removeViewBox: false,
+    }),
     resolve(),
     typescript({
       rollupCommonJSResolveHack: true,

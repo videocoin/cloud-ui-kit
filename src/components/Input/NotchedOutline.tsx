@@ -10,7 +10,7 @@ export interface NotchedOutlineProps {
   children?: never;
 }
 
-const NotchedOutline = ({
+export const NotchedOutline = ({
   notched,
   labelWidth,
   filled,
@@ -32,5 +32,3 @@ const NotchedOutline = ({
     </div>
   );
 };
-
-export default NotchedOutline;

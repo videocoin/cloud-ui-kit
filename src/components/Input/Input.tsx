@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import cn from 'classnames';
 import css from './Input.module.scss';
-import NotchedOutline from './NotchedOutline';
+import { NotchedOutline } from './NotchedOutline';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -21,7 +21,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   children?: never;
 }
 
-const Input = ({
+export const Input = ({
   label,
   disabled,
   onFocus,
@@ -93,5 +93,3 @@ Input.defaultProps = {
   disabled: false,
   error: false,
 };
-
-export default Input;

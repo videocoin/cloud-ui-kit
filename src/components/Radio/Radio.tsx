@@ -1,7 +1,7 @@
 import React, { ChangeEventHandler, ReactNode, useState } from 'react';
 import cn from 'classnames';
 import { RadioContextProvider } from './RadioContext';
-import RadioBtn from './RadioBtn';
+import { RadioBtn } from './RadioBtn';
 import css from './Radio.module.scss';
 
 export interface RadioGroupProps {
@@ -13,7 +13,7 @@ export interface RadioGroupProps {
   children: ReactNode;
 }
 
-const RadioGroup = ({
+export const RadioGroup = ({
   defaultSelected,
   name,
   onChange,
@@ -48,5 +48,3 @@ RadioGroup.defaultProps = {
 };
 
 RadioGroup.RadioBtn = RadioBtn;
-
-export default RadioGroup;

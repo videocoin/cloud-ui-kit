@@ -1,4 +1,3 @@
-/// <reference types="react" />
 export interface NotchedOutlineProps {
     notched: boolean;
     labelWidth: number;
@@ -6,5 +5,4 @@ export interface NotchedOutlineProps {
     error: boolean;
     children?: never;
 }
-declare const NotchedOutline: ({ notched, labelWidth, filled, error, }: NotchedOutlineProps) => JSX.Element;
-export default NotchedOutline;
+export declare const NotchedOutline: ({ notched, labelWidth, filled, error, }: NotchedOutlineProps) => JSX.Element;

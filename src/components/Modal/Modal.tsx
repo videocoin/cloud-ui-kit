@@ -1,8 +1,8 @@
 import React from 'react';
 import css from './Modal.module.scss';
 import { ReactNode } from 'react';
-import Icon from '../Icon/Icon';
-import Overlay from '../Overlay/Overlay';
+import { Icon } from '../Icon/Icon';
+import { Overlay } from '../Overlay/Overlay';
 
 export interface ModalProps {
   header?: () => ReactNode;
@@ -13,13 +13,13 @@ export interface ModalProps {
   hideCloseButton?: boolean;
 }
 
-const Modal = ({
+export const Modal = ({
   isOpen,
   close,
   header,
   children,
   shouldOverlayClose = true,
-  hideCloseButton,
+  hideCloseButton = true,
 }: ModalProps) => {
   const handleClickOverlay = () => {
     if (shouldOverlayClose) {
@@ -31,7 +31,7 @@ const Modal = ({
       <div className={css.modal}>
         {!hideCloseButton && (
           <button className={css.close} type="button" onClick={close}>
-            <Icon name="close" width={20} height={20} />
+            <Icon name="remove" width={20} height={20} />
           </button>
         )}
         <div className={css.header}>{header && header()}</div>
@@ -40,5 +40,3 @@ const Modal = ({
     </Overlay>
   );
 };
-
-export default Modal;

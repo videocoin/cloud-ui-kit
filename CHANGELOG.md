@@ -1,5 +1,37 @@
 # Changelog
 
+## [0.20.0]
+### Updated
+- Button - add loading state
+- Typography - add align property
+
+## [0.19.1]
+### Fixed
+- Action Bars - accept children instead props
+
+## [0.19.0]
+### Added
+- Icon Button
+
+## [0.18.0]
+### Added
+- Primary navigation
+- Action Bars
+### Updated
+- Rename colors
+- Move typography styles to mixins
+- Rename button themes
+
+## [0.17.0]
+### Added
+- New icons
+- Field Actions
+### Updated
+- Rename components for design compatibility
+### Fixed
+- Export component types
+
+
 ## [0.16.0]
 ### Updated
 - Modal - change header from string to render function

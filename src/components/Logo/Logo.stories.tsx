@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Logo from './Logo';
+import { Logo } from './Logo';
 
-storiesOf('Foundations|Logos', module)
+storiesOf('Foundations|Company Logos', module)
   .add('color white', () => (
     <div>
       <Logo type="colorWhite" width={170} />

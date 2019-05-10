@@ -5,8 +5,6 @@ export interface CardProps {
   children: ReactNode;
 }
 
-const Card = ({ children }: CardProps) => (
+export const Card = ({ children }: CardProps) => (
   <div className={css.card}>{children}</div>
 );
-
-export default Card;

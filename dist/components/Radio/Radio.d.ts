@@ -7,7 +7,7 @@ export interface RadioGroupProps {
     direction?: 'horizontal' | 'vertical';
     children: ReactNode;
 }
-declare const RadioGroup: {
+export declare const RadioGroup: {
     ({ defaultSelected, name, onChange, disabled, children, direction, }: RadioGroupProps): JSX.Element;
     defaultProps: {
         direction: string;
@@ -15,4 +15,3 @@ declare const RadioGroup: {
     };
     RadioBtn: ({ value, children, disabled }: import("./RadioBtn").RadioBtnProps) => JSX.Element;
 };
-export default RadioGroup;

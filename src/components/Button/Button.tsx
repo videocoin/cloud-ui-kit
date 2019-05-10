@@ -1,15 +1,16 @@
 import React, { ReactNode, MouseEvent } from 'react';
 import cn from 'classnames';
 import css from './Button.module.scss';
+import { Icon, IconName } from '../Icon/Icon';
 
-type ButtonTheme =
-  | 'primary'
-  | 'secondary'
-  | 'white'
-  | 'ghost-primary'
-  | 'ghost-secondary';
-type ButtonSize = 'xs' | 'sm' | 'md' | 'lg';
-type ButtonType = 'submit' | 'button' | 'reset';
+export type ButtonTheme =
+  | 'sunkissed'
+  | 'violet-sky'
+  | 'perfect-white'
+  | 'minimal'
+  | 'minimal-sunkissed';
+export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg';
+export type ButtonType = 'submit' | 'button' | 'reset';
 
 export interface ButtonProps {
   theme?: ButtonTheme;
@@ -19,15 +20,21 @@ export interface ButtonProps {
   href?: string;
   onClick?: (e: MouseEvent<any>) => void;
   children: ReactNode;
-  isBlock?: boolean;
+  block?: boolean;
+  loading?: boolean;
+  icon?: IconName;
 }
 
-const Button = ({
+export const Button = ({
   theme,
   size,
   type,
   href,
-  isBlock,
+  block,
+  loading,
+  children,
+  icon,
+  disabled,
   ...props
 }: ButtonProps) => {
   const Comp = href ? 'a' : 'button';
@@ -35,19 +42,32 @@ const Button = ({
     css.root,
     css[`theme-${theme}`],
     css[`size-${size}`],
-    isBlock && css.block,
+    block && css.block,
+    loading && css.loading,
   );
   return (
-    <Comp type={type} {...href && { href }} className={classes} {...props} />
+    <div className={cn(css.wrap, block && css.block)}>
+      <Comp
+        type={type}
+        {...href && { href }}
+        className={classes}
+        disabled={disabled || loading}
+        {...props}
+      >
+        <span className={css.inner}>
+          {icon && <Icon width={24} height={24} name={icon} />}
+          {children}
+        </span>
+      </Comp>
+      <div className={cn(css.loadingBar, loading && css.show)} />
+    </div>
   );
 };
 
 Button.defaultProps = {
-  theme: 'primary',
+  theme: 'sunkissed',
   size: 'md',
   type: 'button',
   href: '',
   disabled: false,
 };
-
-export default Button;

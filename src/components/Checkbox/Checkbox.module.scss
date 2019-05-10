@@ -23,7 +23,7 @@
 }
 
 .checkbox {
-  border: 1px solid rgba($white, 0.24);
+  border: 1px solid rgba($perfect-white, 0.24);
   border-radius: 4px;
   height: 24px;
   margin-right: 12px;
@@ -31,7 +31,7 @@
   width: 24px;
   flex-shrink: 0;
   &::before {
-    background: $orange;
+    background: $sunkissed-orange;
     border-radius: 2px;
     content: '';
     display: block;
