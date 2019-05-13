@@ -2300,6 +2300,14 @@ RadioGroup.defaultProps = {
 };
 RadioGroup.RadioBtn = RadioBtn;
 
+var css$m = ".TopBar-module_bar__2ZbEx {\n  display: flex; }\n";
+var css$n = {"bar":"TopBar-module_bar__2ZbEx"};
+styleInject(css$m);
+
+const TopBar = ({ children }) => {
+    return React__default.createElement("div", { className: css$n.bar }, children);
+};
+
 exports.ActionBar = ActionBar;
 exports.Button = Button;
 exports.Card = Card;
@@ -2313,5 +2321,6 @@ exports.Modal = Modal;
 exports.Navigation = Navigation;
 exports.Overlay = Overlay;
 exports.RadioGroup = RadioGroup;
+exports.TopBar = TopBar;
 exports.Typography = Typography;
 //# sourceMappingURL=index.js.map

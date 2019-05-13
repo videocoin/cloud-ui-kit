@@ -2291,5 +2291,13 @@ RadioGroup.defaultProps = {
 };
 RadioGroup.RadioBtn = RadioBtn;
 
-export { ActionBar, Button, Card, Checkbox, FieldAction, Icon, IconButton, Input, Logo, Modal, Navigation, Overlay, RadioGroup, Typography };
+var css$m = ".TopBar-module_bar__2ZbEx {\n  display: flex; }\n";
+var css$n = {"bar":"TopBar-module_bar__2ZbEx"};
+styleInject(css$m);
+
+const TopBar = ({ children }) => {
+    return React.createElement("div", { className: css$n.bar }, children);
+};
+
+export { ActionBar, Button, Card, Checkbox, FieldAction, Icon, IconButton, Input, Logo, Modal, Navigation, Overlay, RadioGroup, TopBar, Typography };
 //# sourceMappingURL=index.es.js.map
