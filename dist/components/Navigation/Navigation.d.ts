@@ -5,6 +5,6 @@ interface NavigationProps {
 }
 export declare const Navigation: {
     ({ children, expanded }: NavigationProps): JSX.Element;
-    NavLink: ({ icon, active, to, label }: import("./NavLink").NavItemProps) => JSX.Element;
+    NavLink: ({ icon, active, to, label, ...props }: import("./NavLink").NavItemProps) => JSX.Element;
 };
 export {};

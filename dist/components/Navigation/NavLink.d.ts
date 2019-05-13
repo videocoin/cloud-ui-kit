@@ -6,4 +6,4 @@ export interface NavItemProps {
     to: string;
     label: string;
 }
-export declare const NavLink: ({ icon, active, to, label }: NavItemProps) => JSX.Element;
+export declare const NavLink: ({ icon, active, to, label, ...props }: NavItemProps) => JSX.Element;

@@ -3,11 +3,13 @@
 .nav {
   overflow: hidden;
   max-width: 310px;
+  width: 310px;
   @include laptop {
     max-width: 92px;
   }
   &.expand {
     max-width: 310px;
+    width: 310px;
   }
 }
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.21.0]
+### Added
+- TopBar
+
 ## [0.20.0]
 ### Updated
 - Button - add loading state
