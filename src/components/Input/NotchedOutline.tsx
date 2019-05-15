@@ -21,11 +21,12 @@ export const NotchedOutline = ({
     [css.notched]: notched,
     [css.error]: error,
   };
+
   return (
     <div className={cn(classes)}>
       <div className={css.leading} />
       <div
-        className={css.notch}
+        className={cn(css.notch, filled && css.notchActive)}
         style={{ width: notched || filled ? labelWidth : 0 }}
       />
       <div className={css.trailing} />

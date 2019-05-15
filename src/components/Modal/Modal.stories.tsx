@@ -9,8 +9,7 @@ const ModalStory = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
-      <Button onClick={() => setIsOpen(true)}>Open modal</Button>
+    <div style={{ width: 560 }}>
       <Modal
         isOpen={isOpen}
         close={() => setIsOpen(false)}
@@ -31,11 +30,14 @@ const ModalStory = () => {
             go here.
           </Typography>
           <div style={{ marginTop: 56 }}>
-            <ActionBar secondaryText="Cancel" primaryText="Button" />
+            <ActionBar>
+              <Button theme="minimal">Cancel</Button>
+              <Button>Button</Button>
+            </ActionBar>
           </div>
         </div>
       </Modal>
-    </>
+    </div>
   );
 };
 

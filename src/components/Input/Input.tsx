@@ -13,7 +13,7 @@ import { NotchedOutline } from './NotchedOutline';
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   value: string;
-  onChange: (event: FormEvent<HTMLInputElement>) => void;
+  onChange?: (event: FormEvent<HTMLInputElement>) => void;
   onFocus?: (event: FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
   error?: boolean;
@@ -29,13 +29,18 @@ export const Input = ({
   value,
   error = false,
   postfix,
+  readOnly,
   ...props
 }: InputProps) => {
   const labelRef = useRef<HTMLDivElement>(null);
-  const [focused, setFocused] = useState(Boolean(value));
+  const [focused, setFocused] = useState(false);
   const [labelWidth, setLabelWidth] = useState(0);
+  const hasValue = value !== '';
 
   const onFocusHandler = (e: FocusEvent<HTMLInputElement>): void => {
+    if (readOnly) {
+      return;
+    }
     setFocused(true);
     onFocus && onFocus(e);
   };
@@ -44,12 +49,18 @@ export const Input = ({
     onBlur && onBlur(e);
   };
 
-  useEffect(() => {
+  const updateLabelWidth = () => {
     setLabelWidth(
       labelRef && labelRef.current && labelRef.current.offsetWidth > 0
         ? labelRef.current.offsetWidth * 0.75 + 22
         : 0,
     );
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      updateLabelWidth();
+    }, 3);
   }, []);
 
   const rootClasses = {
@@ -59,7 +70,7 @@ export const Input = ({
 
   const inputClasses = {
     [css.input]: true,
-    [css.active]: Boolean(value),
+    [css.active]: hasValue,
     [css.error]: error,
   };
 
@@ -71,6 +82,7 @@ export const Input = ({
         className={cn(inputClasses)}
         disabled={disabled}
         value={value}
+        readOnly={readOnly}
         {...props}
       />
       {label && (
@@ -81,7 +93,7 @@ export const Input = ({
       <NotchedOutline
         error={error}
         notched={focused}
-        filled={Boolean(value)}
+        filled={hasValue}
         labelWidth={labelWidth}
       />
       {postfix && postfix()}

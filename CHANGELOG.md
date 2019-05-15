@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.23.0]
+### Added 
+- Indicator
+- Single Selector
+### Updated
+- add gradient variables
+
+## [0.22.0]
+### Fixed
+- Add dist to ignore
+- Some UI fixes
+
 ## [0.21.0]
 ### Added
 - TopBar

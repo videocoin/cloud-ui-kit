@@ -4,7 +4,7 @@ import { Input } from './Input';
 import { FieldAction } from '../FieldAction/FieldAction';
 
 const InputStory = () => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('123231');
   return (
     <Input
       label="Form field"

@@ -27,7 +27,6 @@
     "node_modules",
     "**/*.stories.tsx",
     "build",
-    "dist",
     "example",
     "rollup.config.js"
   ]

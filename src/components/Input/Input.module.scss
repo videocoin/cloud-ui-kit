@@ -5,7 +5,6 @@
   position: relative;
   display: flex;
   height: 56px;
-  will-change: opacity, transform, color;
   &.disabled {
     opacity: 0.36;
   }
@@ -22,20 +21,14 @@
   background: none;
   transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: $perfect-white;
   caret-color: $caretColor;
-  &:-webkit-autofill {
-    -webkit-animation-name: autofill;
-    -webkit-animation-fill-mode: both;
-  }
   @include placeholder {
     opacity: 0;
     color: rgba($lightBody, 0.48);
   }
-  &:focus,
+  &:focus:not(:read-only),
   &.active {
     ~ .label {
       transform: translateY(-160%) scale(0.75);
@@ -46,7 +39,7 @@
       opacity: 1;
     }
   }
-  &:focus {
+  &:focus:not(:read-only) {
     ~ .label {
       color: rgba($perfect-white, 0.87);
     }
@@ -61,6 +54,10 @@
     ~ .label {
       color: $impossibly-pink-w1;
     }
+  }
+  &:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
   }
 }
 
@@ -105,7 +102,6 @@
 }
 
 .leading,
-.notch,
 .trailing {
   height: 100%;
   transition: border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -123,13 +119,22 @@
 }
 
 .notch {
+  height: 100%;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  pointer-events: none;
   flex: 0 0 auto;
   width: 0;
   max-width: calc(100% - 32px * 2);
-  transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1),
-    border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   border-top: none;
   border-color: $inputBorder;
+  &:not(.notchActive) {
+    transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+      border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &.notchActive {
+    transition: border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .trailing {
@@ -148,7 +153,6 @@
   white-space: nowrap;
   cursor: text;
   overflow: hidden;
-  will-change: transform;
   right: auto;
   left: 32px;
   color: $lightBody;
@@ -156,14 +160,32 @@
   pointer-events: none;
   transform-origin: left top;
   transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
-    -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@-webkit-keyframes autofill {
+@keyframes autofill {
   to {
     color: #fff;
     background: transparent;
     font-family: 'Rubik', sans-serif;
   }
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }

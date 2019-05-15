@@ -23,6 +23,7 @@ export interface ButtonProps {
   block?: boolean;
   loading?: boolean;
   icon?: IconName;
+  form?: string;
 }
 
 export const Button = ({
@@ -59,7 +60,7 @@ export const Button = ({
           {children}
         </span>
       </Comp>
-      <div className={cn(css.loadingBar, loading && css.show)} />
+      {loading && <div className={css.loadingBar} />}
     </div>
   );
 };
