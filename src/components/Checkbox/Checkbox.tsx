@@ -9,7 +9,7 @@ import css from './Checkbox.module.scss';
 export interface CheckboxProps {
   checked: boolean;
   onChange: (event: FormEvent<HTMLInputElement>) => void;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export const Checkbox = ({
@@ -39,7 +39,7 @@ export const Checkbox = ({
         {...props}
       />
       <div className={css.checkbox} />
-      <div className={css.label}>{children}</div>
+      {children && <div className={css.label}>{children}</div>}
     </label>
   );
 };
