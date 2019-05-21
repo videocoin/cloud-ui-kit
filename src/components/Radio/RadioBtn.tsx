@@ -1,4 +1,5 @@
 import React, { ReactNode, useContext } from 'react';
+import cn from 'classnames';
 import css from './Radio.module.scss';
 import { RadioContext } from './RadioContext';
 
@@ -6,15 +7,25 @@ export interface RadioBtnProps {
   value: string;
   disabled?: boolean;
   children: ReactNode | string;
+  activeClassname?: string;
 }
 
-export const RadioBtn = ({ value, children, disabled }: RadioBtnProps) => {
+export const RadioBtn = ({
+  value,
+  children,
+  disabled,
+  activeClassname = '',
+}: RadioBtnProps) => {
   const { selected, onChange, name, disabled: disabledGroup } = useContext(
     RadioContext,
   );
-
+  const classes = cn(
+    css.root,
+    disabled && css.disabled,
+    selected && activeClassname,
+  );
   return (
-    <label className={css.root}>
+    <label className={classes}>
       <input
         type="radio"
         value={value}

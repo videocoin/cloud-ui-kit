@@ -12,6 +12,7 @@ export * from './components/Modal/Modal';
 export * from './components/Navigation/Navigation';
 export * from './components/Overlay/Overlay';
 export * from './components/Radio/Radio';
+export * from './components/Select/Select';
 export * from './components/SingleSelector/SingleSelector';
 export * from './components/TopBar/TopBar';
 export * from './components/Typography/Typography';

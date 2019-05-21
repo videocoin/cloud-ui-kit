@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.27.0]
+### Added
+- Select
+- Icons
+
 ## [0.23.0]
 ### Added 
 - Indicator
