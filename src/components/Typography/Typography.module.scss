@@ -1,5 +1,15 @@
 @import '../../styles/vars';
 
+.root {
+  a {
+    text-decoration: none;
+    color: $sunkissed-orange;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .display1 {
   @include display-1;
   &.light {
