@@ -16,7 +16,6 @@
   width: 100%;
   height: 100%;
   padding: 12px 32px 14px;
-  border-radius: 0;
   border: none;
   background: none;
   transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -71,6 +70,7 @@
   height: 100%;
   text-align: left;
   pointer-events: none;
+  z-index: 1;
   &.notched {
     .leading {
       border-color: $inputFocusBorder;
@@ -113,7 +113,7 @@
 .leading {
   border-radius: 4px 0 0 4px;
   border-left: 1px solid;
-  border-color: $inputBorder;
+  border-color: $inputBorder $inputBorder $inputBorder;
   border-right: none;
   width: 21px;
 }

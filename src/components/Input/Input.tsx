@@ -5,6 +5,7 @@ import React, {
   useRef,
   useState,
   useEffect,
+  ReactNode,
 } from 'react';
 import cn from 'classnames';
 import css from './Input.module.scss';
@@ -17,7 +18,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   onFocus?: (event: FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
   error?: boolean;
-  postfix?: () => void;
+  postfix?: () => ReactNode;
   children?: never;
 }
 
@@ -96,7 +97,7 @@ export const Input = ({
         filled={hasValue}
         labelWidth={labelWidth}
       />
-      {postfix && postfix()}
+      {postfix && <span className={css.postfix}>{postfix()}</span>}
     </label>
   );
 };
