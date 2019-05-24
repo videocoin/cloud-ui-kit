@@ -11,11 +11,10 @@
 .header {
   background: $modalHeader;
   border-radius: 24px 24px 0 0;
-  padding: 25px 48px;
   color: rgba($perfect-white, 0.64);
   text-align: center;
-  &:empty {
-    padding: 18px 48px;
+  &:not(:empty) {
+    padding: 25px 48px;
   }
 }
 

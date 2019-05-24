@@ -10,7 +10,7 @@ export interface ModalProps {
 export const Modal = ({ header, children }: ModalProps) => {
   return (
     <div className={css.modal}>
-      {header && <div className={css.header}>header()</div>}
+      {header && <div className={css.header}>{header()}</div>}
       <div className={css.body}>{children}</div>
     </div>
   );

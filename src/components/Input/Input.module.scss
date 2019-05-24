@@ -113,7 +113,8 @@
 .leading {
   border-radius: 4px 0 0 4px;
   border-left: 1px solid;
-  border-color: $inputBorder $inputBorder $inputBorder;
+  color: $inputBorder;
+  border-color: $inputBorder;
   border-right: none;
   width: 21px;
 }
