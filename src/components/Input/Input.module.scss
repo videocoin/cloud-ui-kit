@@ -30,7 +30,7 @@
   &:focus:not(:read-only),
   &.active {
     ~ .label {
-      transform: translateY(-160%) scale(0.75);
+      transform: translateY(-130%) scale(0.75);
       max-width: 133.33333%;
       text-overflow: clip;
     }
@@ -157,7 +157,8 @@
   right: auto;
   left: 32px;
   color: $lightBody;
-  top: 21px;
+  top: 18px;
+  line-height: 1.1;
   pointer-events: none;
   transform-origin: left top;
   transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
