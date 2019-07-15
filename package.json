@@ -37,7 +37,7 @@
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
     "build-lib": "./node_modules/rollup/bin/rollup -c",
-    "postinstall": "npm run build-lib"
+    "prepare": "npm run build-lib"
   },
   "browserslist": {
     "production": [
