@@ -36,7 +36,8 @@
     "validate": "yarn lint && yarn prettier --list-different",
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
-    "build-lib": "rollup -c"
+    "build-lib": "rollup -c",
+    "postinstall": "npm run build-lib"
   },
   "browserslist": {
     "production": [
