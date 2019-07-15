@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactNode } from 'react';
-import useLockBodyScroll from 'hooks/useLockBodyScroll';
+import useLockBodyScroll from '../../hooks/useLockBodyScroll';
 import css from './Modal.module.scss';
 
 export interface ModalProps {
