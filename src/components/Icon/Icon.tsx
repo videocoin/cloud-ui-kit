@@ -16,6 +16,7 @@ import { ReactComponent as livestreamManager } from './icons/livestreamManager.s
 import { ReactComponent as networkVisualizer } from './icons/networkVisualizer.svg';
 import { ReactComponent as offline } from './icons/offline.svg';
 import { ReactComponent as payment } from './icons/payment.svg';
+import { ReactComponent as pipelines } from './icons/pipelines.svg';
 import { ReactComponent as preparing } from './icons/preparing.svg';
 import { ReactComponent as placeholderSm } from './icons/placeholderSm.svg';
 import { ReactComponent as placeholderXs } from './icons/placeholderXs.svg';
@@ -45,6 +46,7 @@ const ICONS: { [name: string]: FC<SVGProps<SVGElement>> } = {
   networkVisualizer,
   offline,
   payment,
+  pipelines,
   preparing,
   placeholderSm,
   placeholderXs,
@@ -75,6 +77,7 @@ export type IconName =
   | 'networkVisualizer'
   | 'offline'
   | 'payment'
+  | 'pipelines'
   | 'preparing'
   | 'placeholderSm'
   | 'placeholderXs'
