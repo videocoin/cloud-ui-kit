@@ -1,0 +1,29 @@
+@import '~styles/vars';
+
+.root {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  color: $light;
+  th {
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    padding: 20px 24px;
+  }
+  td {
+    background-color: $grey-dawn;
+    padding: 20px 24px;
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+  tr:nth-child(even) {
+    td {
+      background-color: $grey-dawn-w1;
+    }
+  }
+}

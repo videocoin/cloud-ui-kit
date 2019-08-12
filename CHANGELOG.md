@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.33.0]
+### Added
+- Table
+
 ## [0.27.0]
 ### Added
 - Select

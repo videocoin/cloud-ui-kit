@@ -15,5 +15,6 @@ export * from './src/components/Radio/Radio';
 export * from './src/components/Select/Select';
 export * from './src/components/SingleSelector/SingleSelector';
 export * from './src/components/Spinner/Spinner';
+export * from './src/components/Table/Table';
 export * from './src/components/TopBar/TopBar';
 export * from './src/components/Typography/Typography';
