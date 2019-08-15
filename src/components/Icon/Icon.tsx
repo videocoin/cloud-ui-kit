@@ -3,6 +3,8 @@ import { ReactComponent as account } from './icons/account.svg';
 import { ReactComponent as add } from './icons/add.svg';
 import { ReactComponent as archive } from './icons/archive.svg';
 import { ReactComponent as arrowDown } from './icons/arrowDown.svg';
+import { ReactComponent as arrowLeft } from './icons/arrowLeft.svg';
+import { ReactComponent as arrowRight } from './icons/arrowRight.svg';
 import { ReactComponent as arrowUp } from './icons/arrowUp.svg';
 import { ReactComponent as awaitingInput } from './icons/awaitingInput.svg';
 import { ReactComponent as back } from './icons/back.svg';
@@ -33,6 +35,8 @@ const ICONS: { [name: string]: FC<SVGProps<SVGElement>> } = {
   add,
   archive,
   arrowDown,
+  arrowLeft,
+  arrowRight,
   arrowUp,
   awaitingInput,
   back,
@@ -64,6 +68,8 @@ export type IconName =
   | 'add'
   | 'archive'
   | 'arrowDown'
+  | 'arrowLeft'
+  | 'arrowRight'
   | 'arrowUp'
   | 'awaitingInput'
   | 'back'
