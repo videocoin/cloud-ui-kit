@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.34.0]
+### Added
+- Pagination
+
 ## [0.33.0]
 ### Added
 - Table
