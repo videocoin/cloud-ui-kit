@@ -12,8 +12,8 @@ import { ReactComponent as copy } from './icons/copy.svg';
 import { ReactComponent as deleteIcon } from './icons/delete.svg';
 import { ReactComponent as deposit } from './icons/deposit.svg';
 import { ReactComponent as expandMenu } from './icons/expandMenu.svg';
-// import { ReactComponent as failed } from './icons/failed.svg';
 import { ReactComponent as incomplete } from './icons/incomplete.svg';
+import { ReactComponent as info } from './icons/info.svg';
 import { ReactComponent as livestreamManager } from './icons/livestreamManager.svg';
 import { ReactComponent as networkVisualizer } from './icons/networkVisualizer.svg';
 import { ReactComponent as offline } from './icons/offline.svg';
@@ -23,10 +23,8 @@ import { ReactComponent as preparing } from './icons/preparing.svg';
 import { ReactComponent as placeholderSm } from './icons/placeholderSm.svg';
 import { ReactComponent as placeholderXs } from './icons/placeholderXs.svg';
 import { ReactComponent as remove } from './icons/remove.svg';
-// import { ReactComponent as retractMenu } from './icons/retractMenu.svg';
 import { ReactComponent as streaming } from './icons/streaming.svg';
 import { ReactComponent as VIDToken } from './icons/VIDToken.svg';
-// import { ReactComponent as VIDTokenWhite } from './icons/VIDTokenWhite.svg';
 import { ReactComponent as videoCoinWallet } from './icons/videoCoinWallet.svg';
 import { ReactComponent as withdrawal } from './icons/withdrawal.svg';
 
@@ -44,8 +42,8 @@ const ICONS: { [name: string]: FC<SVGProps<SVGElement>> } = {
   delete: deleteIcon,
   deposit,
   expandMenu,
-  // failed,
   incomplete,
+  info,
   livestreamManager,
   networkVisualizer,
   offline,
@@ -55,10 +53,8 @@ const ICONS: { [name: string]: FC<SVGProps<SVGElement>> } = {
   placeholderSm,
   placeholderXs,
   remove,
-  // retractMenu,
   streaming,
   VIDToken,
-  // VIDTokenWhite,
   videoCoinWallet,
   withdrawal,
 };
@@ -79,6 +75,7 @@ export type IconName =
   | 'expandMenu'
   | 'failed'
   | 'incomplete'
+  | 'info'
   | 'livestreamManager'
   | 'networkVisualizer'
   | 'offline'

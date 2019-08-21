@@ -17,5 +17,7 @@ export * from './components/Select/Select';
 export * from './components/SingleSelector/SingleSelector';
 export * from './components/Spinner/Spinner';
 export * from './components/Table/Table';
+export * from './components/Tooltip/Tooltip';
+export * from './components/Tooltip/WarnTooltip';
 export * from './components/TopBar/TopBar';
 export * from './components/Typography/Typography';

@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.35.0]
+### Added
+- Tooltip
+
 ## [0.34.0]
 ### Added
 - Pagination
