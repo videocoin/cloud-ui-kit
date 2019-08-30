@@ -28,7 +28,7 @@ import { ReactComponent as VIDToken } from './icons/VIDToken.svg';
 import { ReactComponent as videoCoinWallet } from './icons/videoCoinWallet.svg';
 import { ReactComponent as withdrawal } from './icons/withdrawal.svg';
 
-const ICONS: { [name: string]: FC<SVGProps<SVGElement>> } = {
+const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   account,
   add,
   archive,

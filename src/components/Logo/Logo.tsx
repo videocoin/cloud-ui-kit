@@ -8,7 +8,7 @@ import { ReactComponent as colorWhites } from './logos/colorWhiteS.svg';
 import { ReactComponent as white } from './logos/white.svg';
 import { ReactComponent as whites } from './logos/whiteS.svg';
 
-const LOGOS: { [name: string]: FC<SVGProps<SVGElement>> } = {
+const LOGOS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   black,
   blacks,
   colorBlack,
