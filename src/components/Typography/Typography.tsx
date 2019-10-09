@@ -20,7 +20,7 @@ export type TypographyType =
 export type TypographyTag = 'div' | 'span' | 'p';
 
 export type TypographyTheme = 'light' | 'dark' | 'white' | 'primary' | 'custom';
-
+export type TypographyWeight = 'thin' | 'normal' | 'medium' | 'bold';
 export type TypographyAlign =
   | 'inherit'
   | 'left'
@@ -35,6 +35,7 @@ export interface TypographyProps {
   children: ReactNode;
   align?: TypographyAlign;
   className?: string;
+  weight?: TypographyWeight;
 }
 
 export const Typography = ({
@@ -42,6 +43,7 @@ export const Typography = ({
   type = 'body',
   theme = 'light',
   align = 'inherit',
+  weight,
   className,
   ...props
 }: TypographyProps) => {
@@ -50,6 +52,7 @@ export const Typography = ({
     css[type],
     css[theme],
     css[`align-${align}`],
+    css[`weight-${weight}`],
     className,
   );
   return <Comp className={classes} {...props} />;

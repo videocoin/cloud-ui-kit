@@ -231,3 +231,10 @@ $aligns: inherit, left, center, right, justify;
     text-align: $align;
   }
 }
+
+$weights: thin, normal, medium, bold;
+@each $weight in $weights {
+  .weight-#{$weight} {
+    font-weight: if($weight == medium, 500, $weight);
+  }
+}
