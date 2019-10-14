@@ -1,10 +1,6 @@
 {
-  "./src/**/*.{ts,tsx}": [
-    "eslint --fix",
-    "git add"
-  ],
-  "./src/**/*.{json,css,scss,md}": [
-    "prettier --config .prettierrc --write",
-    "git add"
-  ]
+  "./src/**/*.{js,ts,tsx,css,json,md,mdx}": [
+     "prettier --write",
+     "git add"
+   ]
 }

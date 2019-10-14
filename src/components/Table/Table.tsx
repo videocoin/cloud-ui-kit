@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import css from './Table.module.scss';
 import { map } from 'lodash/fp';
-import { Typography } from '../..';
+import { Typography } from '../Typography/Typography';
 
 export interface Field {
   name: string;

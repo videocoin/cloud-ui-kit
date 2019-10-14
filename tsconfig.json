@@ -15,19 +15,15 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "isolatedModules": false,
     "noEmit": true,
     "jsx": "react",
     "baseUrl": "src",
-    "declaration": true
+    "declaration": true,
+    "declarationDir": "dist"
   },
   "include": [
     "src"
   ],
-  "exclude": [
-    "node_modules",
-    "**/*.stories.tsx",
-    "build",
-    "example",
-    "rollup.config.js"
-  ]
+  "exclude": ["node_modules", "build"]
 }

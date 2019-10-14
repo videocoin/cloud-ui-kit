@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import BaseSelect, { components } from 'react-select';
-import { Icon } from '../..';
+import { Icon } from '../Icon/Icon';
 
 export interface Option {
   value: string | number;

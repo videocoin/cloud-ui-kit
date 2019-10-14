@@ -11,8 +11,6 @@ const ModalStory = () => {
   return (
     <div style={{ width: 560 }}>
       <Modal
-        isOpen={isOpen}
-        close={() => setIsOpen(false)}
         header={() => (
           <Typography theme="white" type="subtitle">
             Popup title

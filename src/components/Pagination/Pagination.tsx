@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import css from './Pagination.module.scss';
-import { Icon, Typography } from '../..';
+import { Icon } from '../Icon/Icon';
+import { Typography } from '../Typography/Typography';
 
 interface PaginationProps {
   onChange: (page: number) => void;
