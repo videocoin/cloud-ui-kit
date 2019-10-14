@@ -1,4 +1,5 @@
 @import '../../styles/vars';
+@import '../../styles/mixins';
 
 .root {
   a {
@@ -64,6 +65,10 @@
 
 .title {
   @include title;
+  @include mobile {
+    font-size: 24px;
+    line-height: 36px;
+  }
   &.light {
     color: $lightTitle;
   }
@@ -80,6 +85,11 @@
 
 .smallTitle {
   @include small-title;
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
   &.light {
     color: $lightSmallTitle;
   }
@@ -195,6 +205,10 @@
 
 .caption {
   @include caption;
+  @include mobile {
+    font-size: 10px;
+    line-height: 12px;
+  }
   &.light {
     color: $lightCaption;
   }
