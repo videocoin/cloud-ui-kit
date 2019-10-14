@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.38.1]
+### Changed 
+- Return icon dimensions
+
+## [0.38.0]
+### Changed 
+- Refactor build library
+
 ## [0.35.0]
 ### Added
 - Tooltip

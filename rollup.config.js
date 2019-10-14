@@ -37,7 +37,6 @@ export default {
     svgr({
       svgoConfig: {
         plugins: {
-          removeDimensions: true,
           removeViewBox: false
         }
       }
