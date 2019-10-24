@@ -11,6 +11,7 @@ export * from './src/components/Logo/Logo';
 export * from './src/components/Modal/Modal';
 export * from './src/components/Navigation/Navigation';
 export * from './src/components/Overlay/Overlay';
+export * from './src/components/Pagination/Pagination';
 export * from './src/components/Radio/Radio';
 export * from './src/components/Select/Select';
 export * from './src/components/SingleSelector/SingleSelector';

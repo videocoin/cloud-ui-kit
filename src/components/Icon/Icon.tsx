@@ -8,7 +8,9 @@ import { ReactComponent as arrowRight } from './icons/arrowRight.svg';
 import { ReactComponent as arrowUp } from './icons/arrowUp.svg';
 import { ReactComponent as awaitingInput } from './icons/awaitingInput.svg';
 import { ReactComponent as back } from './icons/back.svg';
+import { ReactComponent as block } from './icons/block.svg';
 import { ReactComponent as copy } from './icons/copy.svg';
+import { ReactComponent as dashboard } from './icons/dashboard.svg';
 import { ReactComponent as deleteIcon } from './icons/delete.svg';
 import { ReactComponent as deposit } from './icons/deposit.svg';
 import { ReactComponent as expandMenu } from './icons/expandMenu.svg';
@@ -23,7 +25,11 @@ import { ReactComponent as preparing } from './icons/preparing.svg';
 import { ReactComponent as placeholderSm } from './icons/placeholderSm.svg';
 import { ReactComponent as placeholderXs } from './icons/placeholderXs.svg';
 import { ReactComponent as remove } from './icons/remove.svg';
+import { ReactComponent as search } from './icons/search.svg';
+import { ReactComponent as stream } from './icons/stream.svg';
 import { ReactComponent as streaming } from './icons/streaming.svg';
+import { ReactComponent as transaction } from './icons/transaction.svg';
+import { ReactComponent as transactions } from './icons/transactions.svg';
 import { ReactComponent as VIDToken } from './icons/VIDToken.svg';
 import { ReactComponent as videoCoinWallet } from './icons/videoCoinWallet.svg';
 import { ReactComponent as withdrawal } from './icons/withdrawal.svg';
@@ -38,7 +44,9 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   arrowUp,
   awaitingInput,
   back,
+  block,
   copy,
+  dashboard,
   delete: deleteIcon,
   deposit,
   expandMenu,
@@ -53,7 +61,11 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   placeholderSm,
   placeholderXs,
   remove,
+  search,
+  stream,
   streaming,
+  transaction,
+  transactions,
   VIDToken,
   videoCoinWallet,
   withdrawal,
@@ -69,7 +81,9 @@ export type IconName =
   | 'arrowUp'
   | 'awaitingInput'
   | 'back'
+  | 'block'
   | 'copy'
+  | 'dashboard'
   | 'delete'
   | 'deposit'
   | 'expandMenu'
@@ -85,8 +99,12 @@ export type IconName =
   | 'placeholderSm'
   | 'placeholderXs'
   | 'remove'
+  | 'search'
+  | 'stream'
   | 'retractMenu'
   | 'streaming'
+  | 'transaction'
+  | 'transactions'
   | 'VIDToken'
   | 'VIDTokenWhite'
   | 'videoCoinWallet'
@@ -103,6 +121,6 @@ export interface IconProps {
 export const Icon = ({ width, height, name, color = '#EEE3FF' }: IconProps) => {
   const Comp = ICONS[name];
   return (
-    <Comp fill={color} {...width && { width }} {...height && { height }} />
+    <Comp fill={color} {...(width && { width })} {...(height && { height })} />
   );
 };

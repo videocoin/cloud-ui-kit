@@ -42,7 +42,7 @@ export default function useLockBodyScroll(onlyMobile = false) {
 
     return () => {
       document.body.style.paddingRight = null;
-      document.body.style.overflow = null;
+      document.body.style.overflow = 'visible';
       document.body.style.height = null;
       document.body.style.width = null;
       document.body.style.position = null;

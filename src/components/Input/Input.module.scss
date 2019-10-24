@@ -158,6 +158,7 @@
   left: 32px;
   color: $lightBody;
   top: 18px;
+  max-width: calc(100% - 56px);
   line-height: 1.1;
   pointer-events: none;
   transform-origin: left top;
