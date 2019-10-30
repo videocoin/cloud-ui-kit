@@ -30,7 +30,7 @@
   &:focus:not(:read-only),
   &.active {
     ~ .label {
-      transform: translateY(-130%) scale(0.75);
+      transform: translateY(-140%) scale(0.75);
       max-width: 133.33333%;
       text-overflow: clip;
     }
