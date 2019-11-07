@@ -15,7 +15,7 @@ export const Navigation = ({ children, expanded }: NavigationProps) => {
     <div className={cn(css.nav, expanded && css.expand)}>
       <div className={css.head}>
         <Logo width={48} height={48} type="colorWhite" short />
-        <Typography type="bodyAlt">Videocoin Network</Typography>
+        <Typography type="body">Videocoin Network</Typography>
       </div>
       <div className={css.links}>{children}</div>
     </div>

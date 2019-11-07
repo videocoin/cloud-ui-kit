@@ -23,7 +23,7 @@ export const Table = <T extends object>({
   const renderHead = () =>
     map(({ name, label, colspan = 1 }) => (
       <th key={name} colSpan={colspan}>
-        <Typography type="smallBodyAlt">{label}</Typography>
+        <Typography type="smallBody">{label}</Typography>
       </th>
     ))(fields);
 

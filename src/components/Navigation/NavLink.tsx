@@ -26,7 +26,7 @@ export const NavLink = ({
   return (
     <div className={classes} {...props}>
       <Icon name={icon} width={28} height={28} />
-      <Typography type="bodyAlt">{label}</Typography>
+      <Typography type="body">{label}</Typography>
     </div>
   );
 };

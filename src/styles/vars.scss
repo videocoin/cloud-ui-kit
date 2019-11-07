@@ -1,4 +1,3 @@
-@import 'typography';
 @import 'colors';
 
 // Typography
@@ -6,13 +5,16 @@ $light: #e1ccff;
 $dark: $base;
 $lightTitle: #b7a5d2;
 $lightSmallTitle: #ccb1f2;
-$lightSubtitle: #62517a;
-$lightSubtitleAlt: #a287ca;
-$lightBody: #9683b2;
-$lightBodyAlt: #b79cdd;
-$lightSmallBody: #aa90d0;
-$lightSmallBodyAlt: rgba(#e1ccff, 0.76);
-$lightCaption: rgba(#b8a8ce, 0.72);
+$lightSubtitle: #CCB1F2;
+$lightSubtitleCaps: #6D5C85;
+$lightBody: #CCB1F2;
+$lightBodyThin: #B198D4;
+$lightSmallBody: #B099D2;
+$lightSmallBodyThin: #B099D2;
+$lightCaption: #B099D2;
+$lightTiny: #8C7AA7;
+
+$sunkissedSubtitleCaps: #A6725D;
 
 //
 $radioBox: $grey-dawn-w2;
@@ -33,3 +35,19 @@ $lowly: 0 8px 20px 0 rgba(12, 4, 23, 0.67);
 $midway: 0 12px 28px 0 rgba(12, 4, 23, 0.74);
 $lofty: 0 16px 36px 0 rgba(12, 4, 23, 0.88);
 $highest: 0 20px 48px 0 #0c0417;
+
+
+// opacity
+$opacity-4: .4;
+$opacity-12: .12;
+$opacity-24: .24;
+$opacity-48: .48;
+$opacity-64: .64;
+$opacity-76: .76;
+$opacity-87: .87;
+$opacity-100: 1;
+
+// text-opacity
+$text-opacity-48: .48;
+$text-opacity-76: .76;
+$text-opacity-100: 1;

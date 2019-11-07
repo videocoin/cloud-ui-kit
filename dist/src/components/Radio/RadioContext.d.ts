@@ -8,4 +8,4 @@ export interface RadioContextInterface {
     disabled?: boolean;
 }
 export declare const RadioContext: import("react").Context<Partial<RadioContextInterface>>;
-export declare const RadioContextProvider: import("react").ProviderExoticComponent<import("react").ProviderProps<Partial<RadioContextInterface>>>;
+export declare const RadioContextProvider: import("react").Provider<Partial<RadioContextInterface>>;

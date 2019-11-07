@@ -41,11 +41,11 @@ export default function useLockBodyScroll(onlyMobile = false) {
     document.body.style.width = '100%';
 
     return () => {
-      document.body.style.paddingRight = null;
+      document.body.style.paddingRight = '';
       document.body.style.overflow = 'visible';
-      document.body.style.height = null;
-      document.body.style.width = null;
-      document.body.style.position = null;
+      document.body.style.height = '';
+      document.body.style.width = '';
+      document.body.style.position = '';
       window.scrollTo(0, scrollPosition);
     };
   }, [onlyMobile]);

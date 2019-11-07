@@ -8,18 +8,19 @@ storiesOf('Foundations|Typography', module)
       <Typography type="display1">Display 1</Typography>
       <Typography type="display2">Display 2</Typography>
       <Typography type="display3">Display 3</Typography>
+      <Typography type="display4">Display 4</Typography>
       <div style={{ height: 20 }} />
       <Typography type="title">Title</Typography>
       <Typography type="smallTitle">Small Title</Typography>
-      <Typography type="subtitle">Subtitle</Typography>
-      <Typography type="subtitleAlt">Subtitle Alt</Typography>
-      <div style={{ height: 20 }} />
-      <Typography type="body">Body</Typography>
-      <Typography type="bodyAlt">Body Alt</Typography>
-      <Typography type="smallBody">Small Body</Typography>
-      <Typography type="smallBodyAlt">Small Body Alt</Typography>
+      <Typography type="subtitleCaps">Subtitle Caps</Typography>
+      <Typography type="subtitle">Subtitle Regular</Typography>
+      <Typography type="subtitleThin">Subtitle Thin</Typography>
+      <Typography type="body">Body Regular</Typography>
+      <Typography type="bodyThin">Body Thin</Typography>
+      <Typography type="smallBody">Small Body Regular</Typography>
+      <Typography type="smallBodyThin">Small Body Thin</Typography>
       <Typography type="caption">Caption</Typography>
-      <div style={{ height: 20 }} />
+      <Typography type="tiny">Tiny</Typography>
       <Typography type="button">Button</Typography>
     </div>
   ))
@@ -36,6 +37,9 @@ storiesOf('Foundations|Typography', module)
         <Typography type="display3" theme="dark">
           Display 3
         </Typography>
+        <Typography type="display4" theme="dark">
+          Display 4
+        </Typography>
         <div style={{ height: 20 }} />
         <Typography type="title" theme="dark">
           Title
@@ -46,21 +50,21 @@ storiesOf('Foundations|Typography', module)
         <Typography type="subtitle" theme="dark">
           Subtitle
         </Typography>
-        <Typography type="subtitleAlt" theme="dark">
-          Subtitle Alt
+        <Typography type="subtitleCaps" theme="dark">
+          Subtitle Caps
         </Typography>
         <div style={{ height: 20 }} />
         <Typography type="body" theme="dark">
-          Body
+          Body Regular
         </Typography>
-        <Typography type="bodyAlt" theme="dark">
-          Body Alt
+        <Typography type="bodyThin" theme="dark">
+          Body Thin
         </Typography>
         <Typography type="smallBody" theme="dark">
           Small Body
         </Typography>
-        <Typography type="smallBodyAlt" theme="dark">
-          Small Body Alt
+        <Typography type="smallBodyThin" theme="dark">
+          Small Body Thin
         </Typography>
         <Typography type="caption" theme="dark">
           Caption
@@ -102,21 +106,21 @@ storiesOf('Foundations|Typography', module)
       <Typography type="subtitle" theme="white">
         Subtitle
       </Typography>
-      <Typography type="subtitleAlt" theme="white">
-        Subtitle Alt
+      <Typography type="subtitleCaps" theme="white">
+        Subtitle Caps
       </Typography>
       <div style={{ height: 20 }} />
       <Typography type="body" theme="white">
         Body
       </Typography>
-      <Typography type="bodyAlt" theme="white">
-        Body Alt
+      <Typography type="bodyThin" theme="white">
+        Body Thin
       </Typography>
       <Typography type="smallBody" theme="white">
         Small Body
       </Typography>
-      <Typography type="smallBodyAlt" theme="white">
-        Small Body Alt
+      <Typography type="smallBodyThin" theme="white">
+        Small Body Thin
       </Typography>
       <Typography type="caption" theme="white">
         Caption
@@ -127,48 +131,48 @@ storiesOf('Foundations|Typography', module)
       </Typography>
     </div>
   ))
-  .add('primary', () => (
+  .add('sunkissed', () => (
     <div>
-      <Typography type="display1" theme="primary">
+      <Typography type="display1" theme="sunkissed">
         Display 1
       </Typography>
-      <Typography type="display2" theme="primary">
+      <Typography type="display2" theme="sunkissed">
         Display 2
       </Typography>
-      <Typography type="display3" theme="primary">
+      <Typography type="display3" theme="sunkissed">
         Display 3
       </Typography>
       <div style={{ height: 20 }} />
-      <Typography type="title" theme="primary">
+      <Typography type="title" theme="sunkissed">
         Title
       </Typography>
-      <Typography type="smallTitle" theme="primary">
+      <Typography type="smallTitle" theme="sunkissed">
         Small Title
       </Typography>
-      <Typography type="subtitle" theme="primary">
+      <Typography type="subtitle" theme="sunkissed">
         Subtitle
       </Typography>
-      <Typography type="subtitleAlt" theme="primary">
-        Subtitle Alt
+      <Typography type="subtitleCaps" theme="sunkissed">
+        Subtitle Caps
       </Typography>
       <div style={{ height: 20 }} />
-      <Typography type="body" theme="primary">
+      <Typography type="body" theme="sunkissed">
         Body
       </Typography>
-      <Typography type="bodyAlt" theme="primary">
+      <Typography type="bodyThin" theme="sunkissed">
         Body Alt
       </Typography>
-      <Typography type="smallBody" theme="primary">
+      <Typography type="smallBody" theme="sunkissed">
         Small Body
       </Typography>
-      <Typography type="smallBodyAlt" theme="primary">
+      <Typography type="smallBodyThin" theme="sunkissed">
         Small Body Alt
       </Typography>
-      <Typography type="caption" theme="primary">
+      <Typography type="caption" theme="sunkissed">
         Caption
       </Typography>
       <div style={{ height: 20 }} />
-      <Typography type="button" theme="primary">
+      <Typography type="button" theme="sunkissed">
         Button
       </Typography>
     </div>

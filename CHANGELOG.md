@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.39.0]
+### Breaking Changes
+- New typography types and themes
+
 ## [0.38.1]
 ### Changed 
 - Return icon dimensions

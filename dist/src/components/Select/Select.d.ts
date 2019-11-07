@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export interface Option {
     value: string | number;
     label: string;

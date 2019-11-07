@@ -27,7 +27,7 @@ export const SingleSelector = ({
           <Indicator />
         </div>
       )}
-      <Typography type={selected ? 'bodyAlt' : 'body'}>{label}</Typography>
+      <Typography type={selected ? 'body' : 'bodyThin'}>{label}</Typography>
     </div>
   );
 };
