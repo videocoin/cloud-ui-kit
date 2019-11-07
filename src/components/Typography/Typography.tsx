@@ -65,9 +65,3 @@ export const Typography = ({
   );
   return <Comp className={classes} {...props} />;
 };
-
-Typography.defaultProps = {
-  tagName: 'div',
-  type: 'body',
-  theme: 'light',
-};
