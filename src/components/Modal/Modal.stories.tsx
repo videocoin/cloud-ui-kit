@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Modal } from './Modal';
 import { Typography } from '../Typography/Typography';
@@ -6,8 +6,6 @@ import { Button } from '../Button/Button';
 import { ActionBar } from '../ActionBar/ActionBar';
 
 const ModalStory = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div style={{ width: 560 }}>
       <Modal

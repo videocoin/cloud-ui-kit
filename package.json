@@ -28,7 +28,7 @@
   "scripts": {
     "svgo": "svgo -f src/components/Icon/icons --disable=removeViewBox",
     "start": "yarn storybook",
-    "build": "yarn build-storybook",
+    "build": "yarn build-storybook && yarn build-lib",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.+(ts|tsx)\"",
