@@ -13,11 +13,4 @@ export interface TypographyProps {
     className?: string;
     weight?: TypographyWeight;
 }
-export declare const Typography: {
-    ({ tagName: Comp, type, theme, align, weight, className, ...props }: TypographyProps): JSX.Element;
-    defaultProps: {
-        tagName: string;
-        type: string;
-        theme: string;
-    };
-};
+export declare const Typography: ({ tagName: Comp, type, theme, align, weight, className, ...props }: TypographyProps) => JSX.Element;
