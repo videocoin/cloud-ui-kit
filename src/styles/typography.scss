@@ -1,3 +1,4 @@
+@import "./vars";
 /** display-1 **/
 $display-1-font-size: 92px;
 $display-1-letter-spacing: -1.2px;
@@ -11,10 +12,20 @@ $display-1-font-weight: 300;
   line-height: $display-1-line-height;
   font-family: $display-1-font-family;
   font-weight: $display-1-font-weight;
+  @include tablet {
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -.83px;
+  }
+  @include mobile {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -.63px;
+  }
 }
 
 /** display-2 **/
-$display-2-opacity: 0.87;
+$display-2-opacity: $opacity-87;
 $display-2-font-size: 64px;
 $display-2-letter-spacing: -0.6px;
 $display-2-line-height: 72px;
@@ -28,22 +39,64 @@ $display-2-font-weight: 300;
   line-height: $display-2-line-height;
   font-family: $display-2-font-family;
   font-weight: $display-2-font-weight;
+  @include tablet {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -.45px;
+  }
+  @include mobile {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -.34px;
+  }
 }
 
 /** display-3 **/
-$display-3-opacity: 0.76;
 $display-3-font-size: 48px;
 $display-3-letter-spacing: -0.04px;
 $display-3-line-height: 56px;
 $display-3-font-family: Rubik;
 $display-3-font-weight: 300;
 @mixin display-3() {
-  opacity: $display-3-opacity;
   font-size: $display-3-font-size;
   letter-spacing: $display-3-letter-spacing;
   line-height: $display-3-line-height;
   font-family: $display-3-font-family;
   font-weight: $display-3-font-weight;
+  @include tablet {
+    font-size: 46px;
+    line-height: 44px;
+    letter-spacing: -.03px;
+  }
+  @include mobile {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -.02px;
+  }
+}
+
+/** display-4 **/
+$display-4-font-size: 32px;
+$display-4-letter-spacing: -0.03px;
+$display-4-line-height: 40px;
+$display-4-font-family: Rubik;
+$display-4-font-weight: bold;
+@mixin display-4() {
+  font-size: $display-4-font-size;
+  letter-spacing: $display-4-letter-spacing;
+  line-height: $display-4-line-height;
+  font-family: $display-4-font-family;
+  font-weight: $display-4-font-weight;
+  @include tablet {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -.02px;
+  }
+  @include mobile {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -.02px;
+  }
 }
 
 /** small-body **/
@@ -51,7 +104,7 @@ $small-body-font-size: 14px;
 $small-body-letter-spacing: 0.28px;
 $small-body-line-height: 24px;
 $small-body-font-family: Rubik;
-$small-body-font-weight: 400;
+$small-body-font-weight: bold;
 
 @mixin small-body() {
   font-size: $small-body-font-size;
@@ -59,23 +112,31 @@ $small-body-font-weight: 400;
   line-height: $small-body-line-height;
   font-family: $small-body-font-family;
   font-weight: $small-body-font-weight;
+  @include mobile {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: .24px;
+  }
 }
 
-/** small-body-alt **/
-$small-body-alt-opacity: 0.76;
-$small-body-alt-font-size: 14px;
-$small-body-alt-letter-spacing: 0.28px;
-$small-body-alt-line-height: 24px;
-$small-body-alt-font-family: Rubik;
-$small-body-alt-font-weight: 700;
+/** small-body-thin **/
+$small-body-thin-font-size: 14px;
+$small-body-thin-letter-spacing: 0.28px;
+$small-body-thin-line-height: 24px;
+$small-body-thin-font-family: Rubik;
+$small-body-thin-font-weight: 400;
 
-@mixin small-body-alt() {
-  opacity: $small-body-alt-opacity;
-  font-size: $small-body-alt-font-size;
-  letter-spacing: $small-body-alt-letter-spacing;
-  line-height: $small-body-alt-line-height;
-  font-family: $small-body-alt-font-family;
-  font-weight: $small-body-alt-font-weight;
+@mixin small-body-thin() {
+  font-size: $small-body-thin-font-size;
+  letter-spacing: $small-body-thin-letter-spacing;
+  line-height: $small-body-thin-line-height;
+  font-family: $small-body-thin-font-family;
+  font-weight: $small-body-thin-font-weight;
+  @include mobile {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: .24px;
+  }
 }
 
 /** small-title **/
@@ -90,38 +151,72 @@ $small-title-font-weight: 700;
   line-height: $small-title-line-height;
   font-family: $small-title-font-family;
   font-weight: $small-title-font-weight;
+  @include mobile {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: .67px;
+  }
+}
+
+/** subtitle-caps **/
+$subtitle-caps-font-size: 20px;
+$subtitle-caps-letter-spacing: -0.1px;
+$subtitle-caps-line-height: 32px;
+$subtitle-caps-font-family: Rubik;
+$subtitle-caps-font-weight: 500;
+$subtitle-caps-text-transform: uppercase;
+@mixin subtitle-caps() {
+  color: #6D5C85;
+  font-size: $subtitle-caps-font-size;
+  letter-spacing: $subtitle-caps-letter-spacing;
+  line-height: $subtitle-caps-line-height;
+  font-family: $subtitle-caps-font-family;
+  font-weight: $subtitle-caps-font-weight;
+  text-transform: $subtitle-caps-text-transform;
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
+    $subtitle-caps-letter-spacing: -0.08px;
+  }
 }
 
 /** subtitle **/
-$subtitle-opacity: 0.64;
 $subtitle-font-size: 20px;
 $subtitle-letter-spacing: -0.1px;
 $subtitle-line-height: 32px;
 $subtitle-font-family: Rubik;
 $subtitle-font-weight: 500;
-$subtitle-text-transform: uppercase;
 @mixin subtitle() {
   font-size: $subtitle-font-size;
   letter-spacing: $subtitle-letter-spacing;
   line-height: $subtitle-line-height;
   font-family: $subtitle-font-family;
   font-weight: $subtitle-font-weight;
-  text-transform: $subtitle-text-transform;
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -.08px;
+  }
 }
 
-/** subtitle-alt **/
-$subtitle-alt-font-size: 20px;
-$subtitle-alt-letter-spacing: -0.1px;
-$subtitle-alt-line-height: 32px;
-$subtitle-alt-font-family: Rubik;
-$subtitle-alt-font-weight: 500;
+/** subtitle-thin **/
+$subtitle-thin-font-size: 20px;
+$subtitle-thin-letter-spacing: -0.1px;
+$subtitle-thin-line-height: 32px;
+$subtitle-thin-font-family: Rubik;
+$subtitle-thin-font-weight: 300;
 
-@mixin subtitle-alt() {
-  font-size: $subtitle-alt-font-size;
-  letter-spacing: $subtitle-alt-letter-spacing;
-  line-height: $subtitle-alt-line-height;
-  font-family: $subtitle-alt-font-family;
-  font-weight: $subtitle-alt-font-weight;
+@mixin subtitle-thin() {
+  font-size: $subtitle-thin-font-size;
+  letter-spacing: $subtitle-thin-letter-spacing;
+  line-height: $subtitle-thin-line-height;
+  font-family: $subtitle-thin-font-family;
+  font-weight: $subtitle-thin-font-weight;
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -.08px;
+  }
 }
 
 /** title **/
@@ -137,6 +232,11 @@ $title-font-weight: 400;
   line-height: $title-line-height;
   font-family: $title-font-family;
   font-weight: $title-font-weight;
+  @include mobile {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -.08px;
+  }
 }
 
 /** body **/
@@ -144,7 +244,7 @@ $body-font-size: 16px;
 $body-letter-spacing: 0.12px;
 $body-line-height: 24px;
 $body-font-family: Rubik;
-$body-font-weight: 400;
+$body-font-weight: 500;
 
 @mixin body() {
   font-size: $body-font-size;
@@ -154,19 +254,19 @@ $body-font-weight: 400;
   font-weight: $body-font-weight;
 }
 
-/** body-alt **/
-$body-alt-font-size: 16px;
-$body-alt-letter-spacing: 0.12px;
-$body-alt-line-height: 24px;
-$body-alt-font-family: Rubik;
-$body-alt-font-weight: 500;
+/** body-thin **/
+$body-thin-font-size: 16px;
+$body-thin-letter-spacing: 0.12px;
+$body-thin-line-height: 24px;
+$body-thin-font-family: Rubik;
+$body-thin-font-weight: 400;
 
-@mixin body-alt() {
-  font-size: $body-alt-font-size;
-  letter-spacing: $body-alt-letter-spacing;
-  line-height: $body-alt-line-height;
-  font-family: $body-alt-font-family;
-  font-weight: $body-alt-font-weight;
+@mixin body-thin() {
+  font-size: $body-thin-font-size;
+  letter-spacing: $body-thin-letter-spacing;
+  line-height: $body-thin-line-height;
+  font-family: $body-thin-font-family;
+  font-weight: $body-thin-font-weight;
 }
 
 /** button **/
@@ -187,7 +287,6 @@ $button-text-transform: uppercase;
 }
 
 /** caption **/
-$caption-opacity: 0.72;
 $caption-font-size: 12px;
 $caption-letter-spacing: 0.06px;
 $caption-line-height: 20px;
@@ -195,10 +294,24 @@ $caption-font-family: Rubik;
 $caption-font-weight: 400;
 
 @mixin caption() {
-  opacity: $caption-opacity;
   font-size: $caption-font-size;
   letter-spacing: $caption-letter-spacing;
   line-height: $caption-line-height;
   font-family: $caption-font-family;
   font-weight: $caption-font-weight;
+}
+
+/** tiny **/
+$tiny-font-size: 10px;
+$tiny-letter-spacing: 0.25px;
+$tiny-line-height: 12px;
+$tiny-font-family: Rubik;
+$tiny-font-weight: 500;
+
+@mixin tiny() {
+  font-size: $tiny-font-size;
+  letter-spacing: $tiny-letter-spacing;
+  line-height: $tiny-line-height;
+  font-family: $tiny-font-family;
+  font-weight: $tiny-font-weight;
 }

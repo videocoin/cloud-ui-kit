@@ -6,20 +6,28 @@ export type TypographyType =
   | 'display1'
   | 'display2'
   | 'display3'
+  | 'display4'
   | 'button'
   | 'caption'
-  | 'smallBodyAlt'
+  | 'smallBodyThin'
   | 'smallBody'
-  | 'bodyAlt'
+  | 'bodyThin'
   | 'body'
-  | 'subtitleAlt'
+  | 'subtitleCaps'
+  | 'subtitleThin'
   | 'subtitle'
   | 'smallTitle'
-  | 'title';
+  | 'title'
+  | 'tiny';
 
 export type TypographyTag = 'div' | 'span' | 'p';
 
-export type TypographyTheme = 'light' | 'dark' | 'white' | 'primary' | 'custom';
+export type TypographyTheme =
+  | 'light'
+  | 'dark'
+  | 'white'
+  | 'sunkissed'
+  | 'custom';
 export type TypographyWeight = 'thin' | 'normal' | 'medium' | 'bold';
 export type TypographyAlign =
   | 'inherit'
@@ -40,7 +48,7 @@ export interface TypographyProps {
 
 export const Typography = ({
   tagName: Comp = 'div',
-  type = 'body',
+  type = 'bodyThin',
   theme = 'light',
   align = 'inherit',
   weight,

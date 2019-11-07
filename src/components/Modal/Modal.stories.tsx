@@ -19,11 +19,11 @@ const ModalStory = () => {
       >
         <div style={{ width: 430, textAlign: 'center' }}>
           <div style={{ marginBottom: 8 }}>
-            <Typography theme="light" type="bodyAlt">
+            <Typography theme="light" type="body">
               Some primary message for the popup goes here
             </Typography>
           </div>
-          <Typography>
+          <Typography type="bodyThin">
             An additional longer bit of text with more detailed information can
             go here.
           </Typography>

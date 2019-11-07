@@ -6,7 +6,7 @@ import { Typography } from '../Typography/Typography';
 storiesOf('Atoms|Card', module).add('basic', () => (
   <Card>
     <div style={{ padding: 40 }}>
-      <Typography>Card body</Typography>
+      <Typography type="smallBodyThin">Card body</Typography>
     </div>
   </Card>
 ));

@@ -1,4 +1,5 @@
 @import '../../styles/vars';
+@import '../../styles/typography';
 @import '../../styles/mixins';
 
 .root {
@@ -26,15 +27,15 @@
   &.white {
     color: $perfect-white;
   }
-  &.primary {
-    color: $sunkissed-orange;
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
 .display2 {
   @include display-2;
   &.light {
-    color: rgba($light, 0.87);
+    color: $light;
   }
   &.dark {
     color: rgba($dark, 0.87);
@@ -42,8 +43,8 @@
   &.white {
     color: rgba($perfect-white, 0.87);
   }
-  &.primary {
-    color: rgba($sunkissed-orange, 0.87);
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
@@ -58,17 +59,28 @@
   &.white {
     color: rgba($perfect-white, 0.76);
   }
-  &.primary {
-    color: rgba($sunkissed-orange, 0.76);
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+.display4 {
+  @include display-4;
+  &.light {
+    color: rgba($light, 0.86);
+  }
+  &.dark {
+    color: rgba($dark, 0.76);
+  }
+  &.white {
+    color: rgba($perfect-white, 0.92);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
 .title {
   @include title;
-  @include mobile {
-    font-size: 24px;
-    line-height: 36px;
-  }
   &.light {
     color: $lightTitle;
   }
@@ -78,18 +90,13 @@
   &.white {
     color: $perfect-white;
   }
-  &.primary {
-    color: $sunkissed-orange;
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
 .smallTitle {
   @include small-title;
-  @include mobile {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-  }
   &.light {
     color: $lightSmallTitle;
   }
@@ -99,8 +106,8 @@
   &.white {
     color: $perfect-white;
   }
-  &.primary {
-    color: $sunkissed-orange;
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
@@ -110,29 +117,44 @@
     color: $lightSubtitle;
   }
   &.dark {
-    color: rgba($dark, 0.36);
+    color: rgba($dark, 0.72);
   }
   &.white {
-    color: rgba($perfect-white, 0.36);
+    color: $perfect-white;
   }
-  &.primary {
-    color: rgba($sunkissed-orange, 0.92);
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
-.subtitleAlt {
-  @include subtitle-alt;
+.subtitleCaps {
+  @include subtitle-caps;
   &.light {
-    color: $lightSubtitleAlt;
+    color: $lightSubtitleCaps;
   }
   &.dark {
-    color: rgba($dark, 0.76);
+    color: rgba($dark, 0.36);
   }
   &.white {
-    color: rgba($perfect-white, 0.76);
+    color: $perfect-white;
   }
-  &.primary {
-    color: rgba($sunkissed-orange, 0.76);
+  &.sunkissed {
+    color: $sunkissedSubtitleCaps;
+  }
+}
+.subtitleThin {
+  @include subtitle-thin;
+  &.light {
+    color: $lightSubtitle;
+  }
+  &.dark {
+    color: rgba($dark, 0.72);
+  }
+  &.white {
+    color: $perfect-white;
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
@@ -147,15 +169,15 @@
   &.white {
     color: rgba($perfect-white, 0.94);
   }
-  &.primary {
-    color: rgba($sunkissed-orange, 0.72);
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
-.bodyAlt {
-  @include body-alt;
+.bodyThin {
+  @include body-thin;
   &.light {
-    color: $lightBodyAlt;
+    color: $lightBodyThin;
   }
 
   &.dark {
@@ -166,8 +188,8 @@
     color: rgba($perfect-white, 0.94);
   }
 
-  &.primary {
-    color: rgba($sunkissed-orange, 0.92);
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
@@ -182,15 +204,15 @@
   &.white {
     color: rgba($perfect-white, 0.92);
   }
-  &.primary {
-    color: rgba($sunkissed-orange, 0.72);
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
-.smallBodyAlt {
-  @include small-body-alt;
+.smallBodyThin {
+  @include small-body-thin;
   &.light {
-    color: $lightSmallBodyAlt;
+    color: $lightSmallBodyThin;
   }
   &.dark {
     color: rgba($dark, 0.76);
@@ -198,17 +220,13 @@
   &.white {
     color: rgba($perfect-white, 0.87);
   }
-  &.primary {
-    color: $sunkissed-orange;
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
 .caption {
   @include caption;
-  @include mobile {
-    font-size: 10px;
-    line-height: 12px;
-  }
   &.light {
     color: $lightCaption;
   }
@@ -218,8 +236,24 @@
   &.white {
     color: rgba($perfect-white, 0.87);
   }
-  &.primary {
-    color: rgba($sunkissed-orange, 0.72);
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.tiny {
+  @include tiny;
+  &.light {
+    color: $lightTiny;
+  }
+  &.dark {
+    color: rgba($dark, 0.72);
+  }
+  &.white {
+    color: rgba($perfect-white, 0.87);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
@@ -234,8 +268,8 @@
   &.white {
     color: rgba($perfect-white, 0.92);
   }
-  &.primary {
-    color: $sunkissed-orange;
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
   }
 }
 
