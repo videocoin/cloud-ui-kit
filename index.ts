@@ -8,6 +8,7 @@ export * from './src/components/IconButton/IconButton';
 export * from './src/components/Indicator/Indicator';
 export * from './src/components/Input/Input';
 export * from './src/components/Logo/Logo';
+export * from './src/components/MarketingButton/MarketingButton';
 export * from './src/components/Modal/Modal';
 export * from './src/components/Navigation/Navigation';
 export * from './src/components/Overlay/Overlay';

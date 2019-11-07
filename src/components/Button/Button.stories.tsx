@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Button } from './Button';
 import { IconButton } from '../IconButton/IconButton';
+import { MarketingButton } from '../MarketingButton/MarketingButton';
 
 storiesOf('Atoms|Buttons', module)
   .add('basic', () => (
@@ -125,5 +126,21 @@ storiesOf('Atoms|Buttons', module)
       >
         Minimal Sunkissed
       </IconButton>
+    </div>
+  ))
+  .add('Marketing', () => (
+    <div>
+      <MarketingButton theme="primary" onClick={action('clicked')}>
+        Primary CTA
+      </MarketingButton>
+      <MarketingButton theme="secondary" onClick={action('clicked')}>
+        Secondary CTA
+      </MarketingButton>
+      <MarketingButton theme="link" onClick={action('clicked')}>
+        Link
+      </MarketingButton>
+      <MarketingButton theme="link-white" onClick={action('clicked')}>
+        Link
+      </MarketingButton>
     </div>
   ));
