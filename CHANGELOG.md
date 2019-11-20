@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.40.0]
+### Added
+- New Icons
+
 ## [0.39.0]
 ### Breaking Changes
 - New typography types and themes

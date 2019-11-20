@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export interface SingleSelectorProps {
     selected: boolean;
     label: string;

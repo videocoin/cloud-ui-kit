@@ -1,12 +1,14 @@
 import React, { FC, SVGProps } from 'react';
 import { ReactComponent as account } from './icons/account.svg';
 import { ReactComponent as add } from './icons/add.svg';
+import { ReactComponent as apple } from './icons/apple.svg';
 import { ReactComponent as archive } from './icons/archive.svg';
 import { ReactComponent as arrowDown } from './icons/arrowDown.svg';
 import { ReactComponent as arrowLeft } from './icons/arrowLeft.svg';
 import { ReactComponent as arrowRight } from './icons/arrowRight.svg';
 import { ReactComponent as arrowUp } from './icons/arrowUp.svg';
 import { ReactComponent as awaitingInput } from './icons/awaitingInput.svg';
+import { ReactComponent as aws } from './icons/aws.svg';
 import { ReactComponent as back } from './icons/back.svg';
 import { ReactComponent as block } from './icons/block.svg';
 import { ReactComponent as copy } from './icons/copy.svg';
@@ -14,8 +16,10 @@ import { ReactComponent as dashboard } from './icons/dashboard.svg';
 import { ReactComponent as deleteIcon } from './icons/delete.svg';
 import { ReactComponent as deposit } from './icons/deposit.svg';
 import { ReactComponent as expandMenu } from './icons/expandMenu.svg';
+import { ReactComponent as gc } from './icons/gc.svg';
 import { ReactComponent as incomplete } from './icons/incomplete.svg';
 import { ReactComponent as info } from './icons/info.svg';
+import { ReactComponent as linux } from './icons/linux.svg';
 import { ReactComponent as livestreamManager } from './icons/livestreamManager.svg';
 import { ReactComponent as networkVisualizer } from './icons/networkVisualizer.svg';
 import { ReactComponent as offline } from './icons/offline.svg';
@@ -30,19 +34,24 @@ import { ReactComponent as stream } from './icons/stream.svg';
 import { ReactComponent as streaming } from './icons/streaming.svg';
 import { ReactComponent as transaction } from './icons/transaction.svg';
 import { ReactComponent as transactions } from './icons/transactions.svg';
+import { ReactComponent as trash } from './icons/trash.svg';
 import { ReactComponent as VIDToken } from './icons/VIDToken.svg';
 import { ReactComponent as videoCoinWallet } from './icons/videoCoinWallet.svg';
+import { ReactComponent as windows } from './icons/windows.svg';
 import { ReactComponent as withdrawal } from './icons/withdrawal.svg';
+import { ReactComponent as workers } from './icons/workers.svg';
 
 const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   account,
   add,
+  apple,
   archive,
   arrowDown,
   arrowLeft,
   arrowRight,
   arrowUp,
   awaitingInput,
+  aws,
   back,
   block,
   copy,
@@ -50,8 +59,10 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   delete: deleteIcon,
   deposit,
   expandMenu,
+  gc,
   incomplete,
   info,
+  linux,
   livestreamManager,
   networkVisualizer,
   offline,
@@ -66,20 +77,25 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   streaming,
   transaction,
   transactions,
+  trash,
   VIDToken,
   videoCoinWallet,
+  windows,
   withdrawal,
+  workers,
 };
 
 export type IconName =
   | 'account'
   | 'add'
+  | 'apple'
   | 'archive'
   | 'arrowDown'
   | 'arrowLeft'
   | 'arrowRight'
   | 'arrowUp'
   | 'awaitingInput'
+  | 'aws'
   | 'back'
   | 'block'
   | 'copy'
@@ -87,9 +103,11 @@ export type IconName =
   | 'delete'
   | 'deposit'
   | 'expandMenu'
+  | 'gc'
   | 'failed'
   | 'incomplete'
   | 'info'
+  | 'linux'
   | 'livestreamManager'
   | 'networkVisualizer'
   | 'offline'
@@ -105,10 +123,13 @@ export type IconName =
   | 'streaming'
   | 'transaction'
   | 'transactions'
+  | 'trash'
   | 'VIDToken'
   | 'VIDTokenWhite'
   | 'videoCoinWallet'
-  | 'withdrawal';
+  | 'windows'
+  | 'withdrawal'
+  | 'workers';
 
 export interface IconProps {
   name: IconName;
