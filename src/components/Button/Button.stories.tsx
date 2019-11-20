@@ -130,7 +130,11 @@ storiesOf('Atoms|Buttons', module)
   ))
   .add('Marketing', () => (
     <div>
-      <MarketingButton theme="primary" onClick={action('clicked')}>
+      <MarketingButton
+        theme="primary"
+        href="http://www.google.com"
+        onClick={action('clicked')}
+      >
         Primary CTA
       </MarketingButton>
       <MarketingButton theme="secondary" onClick={action('clicked')}>

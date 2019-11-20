@@ -50,7 +50,7 @@ export const MarketingButton = ({
       <Comp
         type={type}
         {...(href && { href })}
-        className={classes}
+        className={cn(classes, css.outer)}
         disabled={disabled || loading}
         {...props}
       >

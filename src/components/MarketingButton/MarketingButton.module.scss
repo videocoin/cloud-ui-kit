@@ -5,6 +5,10 @@
   position: relative;
   display: inline-block;
   border-radius: 25px;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .root {
@@ -63,7 +67,7 @@
   }
 }
 
-.inner {
+.outer {
   display: flex;
   align-items: center;
   justify-content: center;
