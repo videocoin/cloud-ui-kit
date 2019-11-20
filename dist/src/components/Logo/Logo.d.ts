@@ -1,4 +1,3 @@
-/// <reference types="react" />
 export declare type LogoType = 'black' | 'white' | 'colorBlack' | 'colorWhite';
 export interface LogoProps {
     type?: LogoType;
