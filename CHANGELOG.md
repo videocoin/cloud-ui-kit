@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.40.1]
+## [0.40.3]
 ### Fixed
 - RadioBtn selected style
 
