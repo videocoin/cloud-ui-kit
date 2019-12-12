@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export interface NotchedOutlineProps {
     notched: boolean;
     labelWidth: number;

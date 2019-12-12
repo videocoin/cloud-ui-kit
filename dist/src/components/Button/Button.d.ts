@@ -10,7 +10,7 @@ export interface ButtonProps {
     disabled?: boolean;
     href?: string;
     onClick?: (e: MouseEvent<any>) => void;
-    children: ReactNode;
+    children?: ReactNode;
     block?: boolean;
     loading?: boolean;
     icon?: IconName;

@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.40.1]
+### Fixed
+- RadioBtn selected style
+
 ## [0.40.0]
 ### Added
 - New Icons
@@ -9,11 +13,11 @@
 - New typography types and themes
 
 ## [0.38.1]
-### Changed 
+### Changed
 - Return icon dimensions
 
 ## [0.38.0]
-### Changed 
+### Changed
 - Refactor build library
 
 ## [0.35.0]
@@ -34,7 +38,7 @@
 - Icons
 
 ## [0.23.0]
-### Added 
+### Added
 - Indicator
 - Single Selector
 ### Updated
@@ -109,9 +113,9 @@
 
 ## [0.11.0]
 ### Updated
-- Typography - add custom color 
+- Typography - add custom color
 ### Fixed
-- Input - fix autofill font 
+- Input - fix autofill font
 - Modal - fix header color
 
 ## [0.10.0]

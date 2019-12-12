@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { IconName } from '../Icon/Icon';
 export interface NavItemProps {
     children?: never;

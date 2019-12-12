@@ -19,10 +19,11 @@ export const RadioBtn = ({
   const { selected, onChange, name, disabled: disabledGroup } = useContext(
     RadioContext,
   );
+
   const classes = cn(
     css.root,
     disabled && css.disabled,
-    selected && activeClassname,
+    selected === value && activeClassname,
   );
   return (
     <label className={classes}>
