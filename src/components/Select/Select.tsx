@@ -10,8 +10,11 @@ export interface Option {
 export interface SelectProps {
   options: Option[];
   onChange: (value: Option) => void;
-  onBlur: (value: Option) => void;
+  onBlur?: (value: Option) => void;
   name?: string;
+  placeholder?: string;
+  value: Option | null;
+  isDisabled?: boolean;
 }
 
 const customStyles = {
