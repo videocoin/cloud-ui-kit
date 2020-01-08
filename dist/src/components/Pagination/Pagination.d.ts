@@ -1,4 +1,3 @@
-/// <reference types="react" />
 interface PaginationProps {
     onChange: (page: number) => void;
     initialPage?: number;

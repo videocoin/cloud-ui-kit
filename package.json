@@ -1,6 +1,6 @@
 {
   "name": "cloud-ui-kit",
-  "version": "0.40.4",
+  "version": "0.41.0",
   "private": true,
   "main": "dist/index.js",
   "module": "dist/index.es.js",

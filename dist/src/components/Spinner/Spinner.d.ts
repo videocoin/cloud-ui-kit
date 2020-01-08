@@ -1,4 +1,3 @@
-/// <reference types="react" />
 export interface SpinnerProps {
     size?: 'xs' | 'sm' | 'md' | 'lg';
     type?: 'fixed' | 'inline';

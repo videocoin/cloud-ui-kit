@@ -40,6 +40,7 @@ import { ReactComponent as videoCoinWallet } from './icons/videoCoinWallet.svg';
 import { ReactComponent as windows } from './icons/windows.svg';
 import { ReactComponent as withdrawal } from './icons/withdrawal.svg';
 import { ReactComponent as workers } from './icons/workers.svg';
+import { ReactComponent as workers2 } from './icons/workers2.svg';
 
 const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   account,
@@ -83,6 +84,7 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   windows,
   withdrawal,
   workers,
+  workers2,
 };
 
 export type IconName =
@@ -129,7 +131,8 @@ export type IconName =
   | 'videoCoinWallet'
   | 'windows'
   | 'withdrawal'
-  | 'workers';
+  | 'workers'
+  | 'workers2';
 
 export interface IconProps {
   name: IconName;
