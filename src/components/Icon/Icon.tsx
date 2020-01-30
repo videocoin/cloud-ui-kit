@@ -37,6 +37,7 @@ import { ReactComponent as transactions } from './icons/transactions.svg';
 import { ReactComponent as trash } from './icons/trash.svg';
 import { ReactComponent as VIDToken } from './icons/VIDToken.svg';
 import { ReactComponent as videoCoinWallet } from './icons/videoCoinWallet.svg';
+import { ReactComponent as videoPlay } from './icons/videoPlay.svg';
 import { ReactComponent as windows } from './icons/windows.svg';
 import { ReactComponent as withdrawal } from './icons/withdrawal.svg';
 import { ReactComponent as workers } from './icons/workers.svg';
@@ -81,6 +82,7 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   trash,
   VIDToken,
   videoCoinWallet,
+  videoPlay,
   windows,
   withdrawal,
   workers,
@@ -129,6 +131,7 @@ export type IconName =
   | 'VIDToken'
   | 'VIDTokenWhite'
   | 'videoCoinWallet'
+  | 'videoPlay'
   | 'windows'
   | 'withdrawal'
   | 'workers'

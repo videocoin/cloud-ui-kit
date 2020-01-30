@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { ButtonProps } from '../Button/Button';
 import { IconName } from '../Icon/Icon';
 export interface IconButtonProps {
