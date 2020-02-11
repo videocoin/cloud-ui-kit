@@ -1,4 +1,3 @@
-/// <reference types="react" />
 export interface WarnTooltip {
     text: string;
     id: string;
