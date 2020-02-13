@@ -20,7 +20,7 @@ addParameters({
   ],
 });
 
-const req = require.context('../src/components', true, /\.stories\.tsx$/);
+const req = require.context('../src', true, /\.stories\.tsx$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

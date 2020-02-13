@@ -1,0 +1,288 @@
+@import '../styles/vars';
+@import '../styles/typography';
+@import '../styles/mixins';
+
+.root {
+  a {
+    text-decoration: none;
+    color: $sunkissed-orange;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    list-style: disc;
+    padding-left: 25px;
+  }
+}
+
+.display1 {
+  @include display-1;
+  &.light {
+    color: $light;
+  }
+  &.dark {
+    color: $dark;
+  }
+  &.white {
+    color: $perfect-white;
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.display2 {
+  @include display-2;
+  &.light {
+    color: $light;
+  }
+  &.dark {
+    color: rgba($dark, 0.87);
+  }
+  &.white {
+    color: rgba($perfect-white, 0.87);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.display3 {
+  @include display-3;
+  &.light {
+    color: rgba($light, 0.76);
+  }
+  &.dark {
+    color: rgba($dark, 0.76);
+  }
+  &.white {
+    color: rgba($perfect-white, 0.76);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+.display4 {
+  @include display-4;
+  &.light {
+    color: rgba($light, 0.86);
+  }
+  &.dark {
+    color: rgba($dark, 0.76);
+  }
+  &.white {
+    color: rgba($perfect-white, 0.92);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.title {
+  @include title;
+  &.light {
+    color: $lightTitle;
+  }
+  &.dark {
+    color: $dark;
+  }
+  &.white {
+    color: $perfect-white;
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.smallTitle {
+  @include small-title;
+  &.light {
+    color: $lightSmallTitle;
+  }
+  &.dark {
+    color: $dark;
+  }
+  &.white {
+    color: $perfect-white;
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.subtitle {
+  @include subtitle;
+  &.light {
+    color: $lightSubtitle;
+  }
+  &.dark {
+    color: rgba($dark, 0.72);
+  }
+  &.white {
+    color: $perfect-white;
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.subtitleCaps {
+  @include subtitle-caps;
+  &.light {
+    color: $lightSubtitleCaps;
+  }
+  &.dark {
+    color: rgba($dark, 0.36);
+  }
+  &.white {
+    color: $perfect-white;
+  }
+  &.sunkissed {
+    color: $sunkissedSubtitleCaps;
+  }
+}
+.subtitleThin {
+  @include subtitle-thin;
+  &.light {
+    color: $lightSubtitle;
+  }
+  &.dark {
+    color: rgba($dark, 0.72);
+  }
+  &.white {
+    color: $perfect-white;
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.body {
+  @include body;
+  &.light {
+    color: $lightBody;
+  }
+  &.dark {
+    color: rgba($dark, 0.5);
+  }
+  &.white {
+    color: rgba($perfect-white, 0.94);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.bodyThin {
+  @include body-thin;
+  &.light {
+    color: $lightBodyThin;
+  }
+
+  &.dark {
+    color: rgba($dark, 0.86);
+  }
+
+  &.white {
+    color: rgba($perfect-white, 0.94);
+  }
+
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.smallBody {
+  @include small-body;
+  &.light {
+    color: $lightSmallBody;
+  }
+  &.dark {
+    color: rgba($dark, 0.56);
+  }
+  &.white {
+    color: rgba($perfect-white, 0.92);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.smallBodyThin {
+  @include small-body-thin;
+  &.light {
+    color: $lightSmallBodyThin;
+  }
+  &.dark {
+    color: rgba($dark, 0.76);
+  }
+  &.white {
+    color: rgba($perfect-white, 0.87);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.caption {
+  @include caption;
+  &.light {
+    color: $lightCaption;
+  }
+  &.dark {
+    color: rgba($dark, 0.5);
+  }
+  &.white {
+    color: rgba($perfect-white, 0.87);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.tiny {
+  @include tiny;
+  &.light {
+    color: $lightTiny;
+  }
+  &.dark {
+    color: rgba($dark, 0.72);
+  }
+  &.white {
+    color: rgba($perfect-white, 0.87);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+.button {
+  @include button;
+  &.light {
+    color: $light;
+  }
+  &.dark {
+    color: $dark;
+  }
+  &.white {
+    color: rgba($perfect-white, 0.92);
+  }
+  &.sunkissed {
+    color: $sunkissed-orange-w1;
+  }
+}
+
+$aligns: inherit, left, center, right, justify;
+@each $align in $aligns {
+  .align-#{$align} {
+    text-align: $align;
+  }
+}
+
+$weights: thin, normal, medium, bold;
+@each $weight in $weights {
+  .weight-#{$weight} {
+    font-weight: if($weight == medium, 500, $weight);
+  }
+}
