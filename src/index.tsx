@@ -17,6 +17,7 @@ export * from './Radio';
 export * from './Select';
 export * from './SingleSelector';
 export * from './Spinner';
+export * from './Switch';
 export * from './Table';
 export * from './Tooltip';
 export * from './Tooltip/WarnTooltip';
