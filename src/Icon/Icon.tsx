@@ -10,6 +10,7 @@ import { ReactComponent as arrowUp } from './icons/arrowUp.svg';
 import { ReactComponent as awaitingInput } from './icons/awaitingInput.svg';
 import { ReactComponent as aws } from './icons/aws.svg';
 import { ReactComponent as back } from './icons/back.svg';
+import { ReactComponent as billing } from './icons/billing.svg';
 import { ReactComponent as block } from './icons/block.svg';
 import { ReactComponent as copy } from './icons/copy.svg';
 import { ReactComponent as dashboard } from './icons/dashboard.svg';
@@ -55,6 +56,7 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   awaitingInput,
   aws,
   back,
+  billing,
   block,
   copy,
   dashboard,
@@ -101,6 +103,7 @@ export type IconName =
   | 'awaitingInput'
   | 'aws'
   | 'back'
+  | 'billing'
   | 'block'
   | 'copy'
   | 'dashboard'
