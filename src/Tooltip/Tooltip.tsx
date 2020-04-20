@@ -6,11 +6,12 @@ export interface TooltipProps {
   id: string;
   type: 'warning';
   children: ReactNode;
+  place: any;
 }
 
-const Tooltip = ({ id, type, children }: TooltipProps) => {
+const Tooltip = ({ children, ...props }: TooltipProps) => {
   return (
-    <ReactTooltip className="tooltip" id={id} type={type} effect="solid">
+    <ReactTooltip className="tooltip" effect="solid" {...props}>
       <div>{children}</div>
     </ReactTooltip>
   );
