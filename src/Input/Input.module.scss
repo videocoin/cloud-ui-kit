@@ -27,7 +27,7 @@
     opacity: 0;
     color: rgba($lightBody, 0.48);
   }
-  &:focus:not(:read-only),
+  &:focus,
   &.active {
     ~ .label {
       transform: translateY(-140%) scale(0.75);
