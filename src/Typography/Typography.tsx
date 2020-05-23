@@ -36,6 +36,8 @@ export type TypographyAlign =
   | 'right'
   | 'justify';
 
+type TextOpacity = 'medium' | 'drift' | 'full';
+
 export interface TypographyProps {
   type?: TypographyType;
   theme?: TypographyTheme;
@@ -44,6 +46,7 @@ export interface TypographyProps {
   align?: TypographyAlign;
   className?: string;
   weight?: TypographyWeight;
+  opacity?: TextOpacity;
 }
 
 const Typography = ({
@@ -53,6 +56,7 @@ const Typography = ({
   align = 'inherit',
   weight,
   className,
+  opacity = 'full',
   ...props
 }: TypographyProps) => {
   const classes = cn(
@@ -61,6 +65,7 @@ const Typography = ({
     css[theme],
     css[`align-${align}`],
     css[`weight-${weight}`],
+    css[`opacity-${opacity}`],
     className,
   );
   return <Comp className={classes} {...props} />;

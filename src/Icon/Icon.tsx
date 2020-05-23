@@ -22,6 +22,7 @@ import { ReactComponent as gc } from './icons/gc.svg';
 import { ReactComponent as incomplete } from './icons/incomplete.svg';
 import { ReactComponent as info } from './icons/info.svg';
 import { ReactComponent as linux } from './icons/linux.svg';
+import { ReactComponent as livestream } from './icons/livestream.svg';
 import { ReactComponent as livestreamManager } from './icons/livestreamManager.svg';
 import { ReactComponent as networkVisualizer } from './icons/networkVisualizer.svg';
 import { ReactComponent as offline } from './icons/offline.svg';
@@ -33,6 +34,7 @@ import { ReactComponent as placeholderXs } from './icons/placeholderXs.svg';
 import { ReactComponent as remove } from './icons/remove.svg';
 import { ReactComponent as search } from './icons/search.svg';
 import { ReactComponent as stream } from './icons/stream.svg';
+import { ReactComponent as singleStream } from './icons/singleStream.svg';
 import { ReactComponent as streaming } from './icons/streaming.svg';
 import { ReactComponent as transaction } from './icons/transaction.svg';
 import { ReactComponent as transactions } from './icons/transactions.svg';
@@ -69,6 +71,7 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   incomplete,
   info,
   linux,
+  livestream,
   livestreamManager,
   networkVisualizer,
   offline,
@@ -80,6 +83,7 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   remove,
   search,
   stream,
+  singleStream,
   streaming,
   transaction,
   transactions,
@@ -118,6 +122,7 @@ export type IconName =
   | 'incomplete'
   | 'info'
   | 'linux'
+  | 'livestream'
   | 'livestreamManager'
   | 'networkVisualizer'
   | 'offline'
@@ -129,6 +134,7 @@ export type IconName =
   | 'remove'
   | 'search'
   | 'stream'
+  | 'singleStream'
   | 'retractMenu'
   | 'streaming'
   | 'transaction'

@@ -18,6 +18,10 @@ export interface SelectProps {
 }
 
 const customStyles = {
+  container: (provided: any) => ({
+    ...provided,
+    zIndex: 100,
+  }),
   menu: (provided: any) => ({
     ...provided,
     backgroundColor: '#281741',
@@ -32,6 +36,20 @@ const customStyles = {
       ':active': { backgroundColor: 'none' },
     };
   },
+  input: (provided: any) => {
+    return {
+      ...provided,
+      caretColor: '#fff',
+      color: '#fff',
+      '::placeholder': {
+        color: '#ccb1f2',
+      },
+    };
+  },
+  placeholder: (provided: any) => ({
+    ...provided,
+    color: '#ccb1f2',
+  }),
   control: (provided: any) => ({
     ...provided,
     backgroundColor: 'transparent',
@@ -44,13 +62,17 @@ const customStyles = {
   }),
   dropdownIndicator: (provided: any) => ({
     ...provided,
-    backgroundColor: '#5F4681',
-    color: '#EEE3FF',
+    backgroundColor: '#fff',
+    color: '#1B0D2F',
     borderRadius: '0 4px 4px 0',
     padding: 15,
   }),
   indicatorSeparator: () => ({
     display: 'none',
+  }),
+  valueContainer: (base: any) => ({
+    ...base,
+    paddingLeft: 32,
   }),
   singleValue: (provided: any, state: any) => {
     const opacity = state.isDisabled ? 0.5 : 0.94;
@@ -64,16 +86,12 @@ const DropdownIndicator = (props: any) => {
   return (
     // @ts-ignore
     <components.DropdownIndicator {...props}>
-      <Icon name="arrowDown" width={24} height={24} />
+      <Icon name="arrowDown" width={24} height={24} color="#1B0D2F" />
     </components.DropdownIndicator>
   );
 };
 
-const Select = ({
-  onChange,
-  options = [],
-  ...selectProps
-}: SelectProps) => {
+const Select = ({ onChange, options = [], ...selectProps }: SelectProps) => {
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
   const handleChange = async (value: Option) => {
     const prevValue = selectedOption;

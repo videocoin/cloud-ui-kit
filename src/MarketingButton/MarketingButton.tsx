@@ -7,7 +7,9 @@ export type MarketingButtonTheme =
   | 'primary'
   | 'secondary'
   | 'link'
-  | 'link-white';
+  | 'link-white'
+  | 'link-secondary'
+  | 'link-dark';
 
 export type MarketingButtonSize = 'xs' | 'sm' | 'md' | 'lg';
 export type MarketingButtonType = 'submit' | 'button' | 'reset';

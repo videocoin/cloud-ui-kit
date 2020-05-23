@@ -15,6 +15,15 @@
     padding-left: 25px;
   }
 }
+.opacity-medium {
+  opacity: .48;
+}
+.opacity-drift {
+  opacity: .76;
+}
+.opacity-full {
+  opacity: 1;
+}
 
 .display1 {
   @include display-1;
@@ -38,10 +47,10 @@
     color: $light;
   }
   &.dark {
-    color: rgba($dark, 0.87);
+    color: $dark;
   }
   &.white {
-    color: rgba($perfect-white, 0.87);
+    color: $perfect-white;
   }
   &.sunkissed {
     color: $sunkissed-orange-w1;
@@ -286,3 +295,4 @@ $weights: thin, normal, medium, bold;
     font-weight: if($weight == medium, 500, $weight);
   }
 }
+
