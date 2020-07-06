@@ -2,6 +2,7 @@ import React, {
   ChangeEvent,
   ChangeEventHandler,
   ReactNode,
+  useEffect,
   useState,
 } from 'react';
 import cn from 'classnames';
@@ -11,6 +12,7 @@ import css from './Radio.module.scss';
 
 export interface RadioGroupProps {
   defaultSelected?: string;
+  value?: string;
   name: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
@@ -19,6 +21,7 @@ export interface RadioGroupProps {
 }
 
 const RadioGroup = ({
+  value,
   defaultSelected,
   name,
   onChange,
@@ -26,10 +29,12 @@ const RadioGroup = ({
   children,
   direction = 'vertical',
 }: RadioGroupProps) => {
-  const [selected, setSelected] = useState(defaultSelected);
-  const onChangeHandle: ChangeEventHandler<HTMLInputElement> = event => {
+  const [selected, setSelected] = useState(defaultSelected || value);
+  useEffect(() => {
+    setSelected(value);
+  }, [value]);
+  const onChangeHandle: ChangeEventHandler<HTMLInputElement> = (event) => {
     const prevSelected = selected;
-    setSelected(event.target.value);
     try {
       onChange(event);
     } catch (e) {
