@@ -19,6 +19,7 @@ export * from './SingleSelector';
 export * from './Spinner';
 export * from './Switch';
 export * from './Table';
+export * from './Textarea';
 export * from './Tooltip';
 export * from './Tooltip/WarnTooltip';
 export * from './TopBar';
