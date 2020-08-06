@@ -22,6 +22,8 @@ export interface TextareaProps
   error?: boolean;
   postfix?: () => ReactNode;
   children?: never;
+  minRows?: number;
+  maxRows?: number;
 }
 
 const Textarea = ({
