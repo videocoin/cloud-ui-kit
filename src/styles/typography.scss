@@ -275,7 +275,6 @@ $button-letter-spacing: 0.07px;
 $button-line-height: 20px;
 $button-font-family: Rubik;
 $button-font-weight: 500;
-$button-text-transform: uppercase;
 
 @mixin button() {
   font-size: $button-font-size;
@@ -283,7 +282,6 @@ $button-text-transform: uppercase;
   line-height: $button-line-height;
   font-family: $button-font-family;
   font-weight: $button-font-weight;
-  text-transform: $button-text-transform;
 }
 
 /** caption **/

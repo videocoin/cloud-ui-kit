@@ -19,6 +19,7 @@ import { ReactComponent as deleteIcon } from './icons/delete.svg';
 import { ReactComponent as deposit } from './icons/deposit.svg';
 import { ReactComponent as dockerHub } from './icons/dockerHub.svg';
 import { ReactComponent as earnings } from './icons/earnings.svg';
+import { ReactComponent as email } from './icons/email.svg';
 import { ReactComponent as expandMenu } from './icons/expandMenu.svg';
 import { ReactComponent as gc } from './icons/gc.svg';
 import { ReactComponent as incomplete } from './icons/incomplete.svg';
@@ -71,6 +72,7 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   deposit,
   dockerHub,
   earnings,
+  email,
   expandMenu,
   gc,
   incomplete,
@@ -124,6 +126,7 @@ export type IconName =
   | 'deposit'
   | 'dockerHub'
   | 'earnings'
+  | 'email'
   | 'expandMenu'
   | 'gc'
   | 'failed'

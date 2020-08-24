@@ -1,0 +1,197 @@
+@import '../styles/vars';
+@import '../styles/mixins';
+
+.root {
+  position: relative;
+  display: flex;
+  min-height: 56px;
+  &.disabled {
+    opacity: 0.36;
+  }
+}
+
+.input {
+  align-self: flex-end;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 12px 32px 14px;
+  padding-top: 20px;
+  line-height: 1.2;
+  border: none;
+  background: none;
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  min-height: 56px;
+  appearance: none;
+  color: $perfect-white;
+  caret-color: $caretColor;
+  @include placeholder {
+    opacity: 0;
+    color: rgba($lightBody, 0.48);
+  }
+  &:focus,
+  &.active {
+    ~ .label {
+      transform: translateY(-140%) scale(0.75);
+      max-width: 133.33333%;
+      text-overflow: clip;
+    }
+    @include placeholder {
+      opacity: 1;
+    }
+  }
+  &:focus:not(:read-only) {
+    ~ .label {
+      color: rgba($perfect-white, 0.87);
+    }
+  }
+  &:not(:focus).active {
+    ~ .label {
+      color: rgba($lightCaption, 0.87);
+    }
+  }
+  &:not(:focus).error,
+  &.error {
+    ~ .label {
+      color: $impossibly-pink-w1;
+    }
+  }
+  &:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+.outline {
+  display: flex;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  text-align: left;
+  pointer-events: none;
+  z-index: 1;
+  &.notched {
+    .leading {
+      border-color: $inputFocusBorder;
+      border-width: 2px;
+    }
+    .notch {
+      padding-left: 0;
+      padding-right: 8px;
+      border-top: none;
+      border-color: $inputFocusBorder;
+      border-width: 2px;
+    }
+    .trailing {
+      border-color: $inputFocusBorder;
+      border-width: 2px;
+    }
+  }
+  &.error {
+    .leading {
+      border-color: $impossibly-pink-w1;
+    }
+    .notch {
+      border-color: $impossibly-pink-w1;
+    }
+    .trailing {
+      border-color: $impossibly-pink-w1;
+    }
+  }
+}
+
+.leading,
+.trailing {
+  height: 100%;
+  transition: border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  pointer-events: none;
+}
+
+.leading {
+  border-radius: 4px 0 0 4px;
+  border-left: 1px solid;
+  color: $inputBorder;
+  border-color: $inputBorder;
+  border-right: none;
+  width: 21px;
+}
+
+.notch {
+  height: 100%;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  pointer-events: none;
+  flex: 0 0 auto;
+  width: 0;
+  max-width: calc(100% - 32px * 2);
+  border-top: none;
+  border-color: $inputBorder;
+  &:not(.notchActive) {
+    transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+      border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &.notchActive {
+    transition: border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.trailing {
+  border-radius: 0 4px 4px 0;
+  flex-grow: 1;
+  border-left: none;
+  border-right: 1px solid;
+  border-color: $inputBorder;
+}
+
+.label {
+  display: inline-block;
+  position: absolute;
+  bottom: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: text;
+  overflow: hidden;
+  right: auto;
+  left: 32px;
+  color: $lightBody;
+  top: 18px;
+  max-width: calc(100% - 56px);
+  line-height: 1.1;
+  pointer-events: none;
+  transform-origin: left top;
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes autofill {
+  to {
+    color: #fff;
+    background: transparent;
+    font-family: 'Rubik', sans-serif;
+  }
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
