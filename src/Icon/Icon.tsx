@@ -22,6 +22,7 @@ import { ReactComponent as earnings } from './icons/earnings.svg';
 import { ReactComponent as email } from './icons/email.svg';
 import { ReactComponent as expandMenu } from './icons/expandMenu.svg';
 import { ReactComponent as gc } from './icons/gc.svg';
+import { ReactComponent as github } from './icons/github.svg';
 import { ReactComponent as incomplete } from './icons/incomplete.svg';
 import { ReactComponent as info } from './icons/info.svg';
 import { ReactComponent as linux } from './icons/linux.svg';
@@ -75,6 +76,7 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   email,
   expandMenu,
   gc,
+  github,
   incomplete,
   info,
   linux,
@@ -129,6 +131,7 @@ export type IconName =
   | 'email'
   | 'expandMenu'
   | 'gc'
+  | 'github'
   | 'failed'
   | 'incomplete'
   | 'info'
