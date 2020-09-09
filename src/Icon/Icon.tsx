@@ -1,6 +1,7 @@
 import React, { FC, SVGProps } from 'react';
 import { ReactComponent as account } from './icons/account.svg';
 import { ReactComponent as add } from './icons/add.svg';
+import { ReactComponent as android } from './icons/android.svg';
 import { ReactComponent as apple } from './icons/apple.svg';
 import { ReactComponent as archive } from './icons/archive.svg';
 import { ReactComponent as arrowDown } from './icons/arrowDown.svg';
@@ -16,12 +17,14 @@ import { ReactComponent as copy } from './icons/copy.svg';
 import { ReactComponent as dashboard } from './icons/dashboard.svg';
 import { ReactComponent as deleteIcon } from './icons/delete.svg';
 import { ReactComponent as deposit } from './icons/deposit.svg';
+import { ReactComponent as dockerHub } from './icons/dockerHub.svg';
 import { ReactComponent as earnings } from './icons/earnings.svg';
 import { ReactComponent as email } from './icons/email.svg';
 import { ReactComponent as expandMenu } from './icons/expandMenu.svg';
 import { ReactComponent as eye } from './icons/eye.svg';
 import { ReactComponent as eyeSlash } from './icons/eye-slash.svg';
 import { ReactComponent as gc } from './icons/gc.svg';
+import { ReactComponent as github } from './icons/github.svg';
 import { ReactComponent as incomplete } from './icons/incomplete.svg';
 import { ReactComponent as info } from './icons/info.svg';
 import { ReactComponent as linux } from './icons/linux.svg';
@@ -47,12 +50,14 @@ import { ReactComponent as videoCoinWallet } from './icons/videoCoinWallet.svg';
 import { ReactComponent as videoPlay } from './icons/videoPlay.svg';
 import { ReactComponent as windows } from './icons/windows.svg';
 import { ReactComponent as withdrawal } from './icons/withdrawal.svg';
+import { ReactComponent as web } from './icons/web.svg';
 import { ReactComponent as workers } from './icons/workers.svg';
 import { ReactComponent as workers2 } from './icons/workers2.svg';
 
 const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   account,
   add,
+  android,
   apple,
   archive,
   arrowDown,
@@ -68,12 +73,14 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   dashboard,
   delete: deleteIcon,
   deposit,
+  dockerHub,
   earnings,
   email,
   expandMenu,
   eye,
   eyeSlash,
   gc,
+  github,
   incomplete,
   info,
   linux,
@@ -97,6 +104,7 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   VIDToken,
   videoCoinWallet,
   videoPlay,
+  web,
   windows,
   withdrawal,
   workers,
@@ -106,6 +114,7 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
 export type IconName =
   | 'account'
   | 'add'
+  | 'android'
   | 'apple'
   | 'archive'
   | 'arrowDown'
@@ -121,12 +130,14 @@ export type IconName =
   | 'dashboard'
   | 'delete'
   | 'deposit'
+  | 'dockerHub'
   | 'earnings'
   | 'email'
   | 'expandMenu'
   | 'eye'
   | 'eyeSlash'
   | 'gc'
+  | 'github'
   | 'failed'
   | 'incomplete'
   | 'info'
@@ -153,6 +164,7 @@ export type IconName =
   | 'VIDTokenWhite'
   | 'videoCoinWallet'
   | 'videoPlay'
+  | 'web'
   | 'windows'
   | 'withdrawal'
   | 'workers'
