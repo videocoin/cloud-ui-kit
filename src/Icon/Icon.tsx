@@ -19,6 +19,8 @@ import { ReactComponent as deposit } from './icons/deposit.svg';
 import { ReactComponent as earnings } from './icons/earnings.svg';
 import { ReactComponent as email } from './icons/email.svg';
 import { ReactComponent as expandMenu } from './icons/expandMenu.svg';
+import { ReactComponent as eye } from './icons/eye.svg';
+import { ReactComponent as eyeSlash } from './icons/eye-slash.svg';
 import { ReactComponent as gc } from './icons/gc.svg';
 import { ReactComponent as incomplete } from './icons/incomplete.svg';
 import { ReactComponent as info } from './icons/info.svg';
@@ -69,6 +71,8 @@ const ICONS: { [name: string]: FC<SVGProps<SVGSVGElement>> } = {
   earnings,
   email,
   expandMenu,
+  eye,
+  eyeSlash,
   gc,
   incomplete,
   info,
@@ -120,6 +124,8 @@ export type IconName =
   | 'earnings'
   | 'email'
   | 'expandMenu'
+  | 'eye'
+  | 'eyeSlash'
   | 'gc'
   | 'failed'
   | 'incomplete'
