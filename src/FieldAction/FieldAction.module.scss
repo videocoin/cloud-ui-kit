@@ -51,7 +51,7 @@
   visibility: hidden;
   transition: 0.15s ease-in-out;
   pointer-events: none;
-  z-index: 2;
+  z-index: 999;
   span {
     position: relative;
   }
