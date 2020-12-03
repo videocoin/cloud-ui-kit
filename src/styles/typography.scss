@@ -3,7 +3,7 @@
 $display-1-font-size: 92px;
 $display-1-letter-spacing: -1.2px;
 $display-1-line-height: 96px;
-$display-1-font-family: Rubik;
+$display-1-font-family: Poppins;
 $display-1-font-weight: 300;
 
 @mixin display-1() {
@@ -29,7 +29,7 @@ $display-2-opacity: $opacity-87;
 $display-2-font-size: 64px;
 $display-2-letter-spacing: -0.6px;
 $display-2-line-height: 72px;
-$display-2-font-family: Rubik;
+$display-2-font-family: Poppins;
 $display-2-font-weight: 300;
 
 @mixin display-2() {
@@ -55,7 +55,7 @@ $display-2-font-weight: 300;
 $display-3-font-size: 48px;
 $display-3-letter-spacing: -0.04px;
 $display-3-line-height: 56px;
-$display-3-font-family: Rubik;
+$display-3-font-family: Poppins;
 $display-3-font-weight: 300;
 @mixin display-3() {
   font-size: $display-3-font-size;
@@ -79,7 +79,7 @@ $display-3-font-weight: 300;
 $display-4-font-size: 32px;
 $display-4-letter-spacing: -0.03px;
 $display-4-line-height: 40px;
-$display-4-font-family: Rubik;
+$display-4-font-family: Poppins;
 $display-4-font-weight: bold;
 @mixin display-4() {
   font-size: $display-4-font-size;
@@ -103,7 +103,7 @@ $display-4-font-weight: bold;
 $small-body-font-size: 14px;
 $small-body-letter-spacing: 0.28px;
 $small-body-line-height: 24px;
-$small-body-font-family: Rubik;
+$small-body-font-family: Poppins;
 $small-body-font-weight: bold;
 
 @mixin small-body() {
@@ -123,7 +123,7 @@ $small-body-font-weight: bold;
 $small-body-thin-font-size: 14px;
 $small-body-thin-letter-spacing: 0.28px;
 $small-body-thin-line-height: 24px;
-$small-body-thin-font-family: Rubik;
+$small-body-thin-font-family: Poppins;
 $small-body-thin-font-weight: 400;
 
 @mixin small-body-thin() {
@@ -143,7 +143,7 @@ $small-body-thin-font-weight: 400;
 $small-title-font-size: 24px;
 $small-title-letter-spacing: 0.8px;
 $small-title-line-height: 36px;
-$small-title-font-family: Rubik;
+$small-title-font-family: Poppins;
 $small-title-font-weight: 700;
 @mixin small-title() {
   font-size: $small-title-font-size;
@@ -162,7 +162,7 @@ $small-title-font-weight: 700;
 $subtitle-caps-font-size: 20px;
 $subtitle-caps-letter-spacing: -0.1px;
 $subtitle-caps-line-height: 32px;
-$subtitle-caps-font-family: Rubik;
+$subtitle-caps-font-family: Poppins;
 $subtitle-caps-font-weight: 500;
 $subtitle-caps-text-transform: uppercase;
 @mixin subtitle-caps() {
@@ -184,7 +184,7 @@ $subtitle-caps-text-transform: uppercase;
 $subtitle-font-size: 20px;
 $subtitle-letter-spacing: -0.1px;
 $subtitle-line-height: 32px;
-$subtitle-font-family: Rubik;
+$subtitle-font-family: Poppins;
 $subtitle-font-weight: 500;
 @mixin subtitle() {
   font-size: $subtitle-font-size;
@@ -203,7 +203,7 @@ $subtitle-font-weight: 500;
 $subtitle-thin-font-size: 20px;
 $subtitle-thin-letter-spacing: -0.1px;
 $subtitle-thin-line-height: 32px;
-$subtitle-thin-font-family: Rubik;
+$subtitle-thin-font-family: Poppins;
 $subtitle-thin-font-weight: 300;
 
 @mixin subtitle-thin() {
@@ -223,7 +223,7 @@ $subtitle-thin-font-weight: 300;
 $title-font-size: 32px;
 $title-letter-spacing: -0.1px;
 $title-line-height: 40px;
-$title-font-family: Rubik;
+$title-font-family: Poppins;
 $title-font-weight: 400;
 
 @mixin title() {
@@ -243,7 +243,7 @@ $title-font-weight: 400;
 $body-font-size: 16px;
 $body-letter-spacing: 0.12px;
 $body-line-height: 24px;
-$body-font-family: Rubik;
+$body-font-family: Poppins;
 $body-font-weight: 500;
 
 @mixin body() {
@@ -258,7 +258,7 @@ $body-font-weight: 500;
 $body-thin-font-size: 16px;
 $body-thin-letter-spacing: 0.12px;
 $body-thin-line-height: 24px;
-$body-thin-font-family: Rubik;
+$body-thin-font-family: Poppins;
 $body-thin-font-weight: 400;
 
 @mixin body-thin() {
@@ -273,7 +273,7 @@ $body-thin-font-weight: 400;
 $button-font-size: 14px;
 $button-letter-spacing: 0.07px;
 $button-line-height: 20px;
-$button-font-family: Rubik;
+$button-font-family: Poppins;
 $button-font-weight: 500;
 
 @mixin button() {
@@ -288,7 +288,7 @@ $button-font-weight: 500;
 $caption-font-size: 12px;
 $caption-letter-spacing: 0.06px;
 $caption-line-height: 20px;
-$caption-font-family: Rubik;
+$caption-font-family: Poppins;
 $caption-font-weight: 400;
 
 @mixin caption() {
@@ -303,7 +303,7 @@ $caption-font-weight: 400;
 $tiny-font-size: 10px;
 $tiny-letter-spacing: 0.25px;
 $tiny-line-height: 12px;
-$tiny-font-family: Rubik;
+$tiny-font-family: Poppins;
 $tiny-font-weight: 500;
 
 @mixin tiny() {

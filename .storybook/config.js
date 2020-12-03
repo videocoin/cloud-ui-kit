@@ -7,23 +7,20 @@ const theme = create({
   brandTitle: 'VideoCoin UI',
   brandUrl: 'https://videocoin.io',
   brandImage: logo,
-  fontBase: '"Rubik", sans-serif',
-
+  fontBase: '"Poppins", sans-serif',
 });
 
 addParameters({
   options: {
     theme,
   },
-  backgrounds: [
-    { name: 'basic', value: '#0C0417', default: true },
-  ],
+  backgrounds: [{ name: 'basic', value: '#0C0417', default: true }],
 });
 
 const req = require.context('../src', true, /\.stories\.tsx$/);
 
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  req.keys().forEach((filename) => req(filename));
 }
 
 configure(loadStories, module);

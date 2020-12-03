@@ -296,3 +296,9 @@ $weights: thin, normal, medium, bold;
   }
 }
 
+$weights: 300, 400, 500, 600, 700;
+@each $weight in $weights {
+  .weight-#{$weight} {
+    font-weight: $weight;
+  }
+}

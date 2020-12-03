@@ -28,7 +28,7 @@ export type TypographyTheme =
   | 'white'
   | 'sunkissed'
   | 'custom';
-export type TypographyWeight = 'thin' | 'normal' | 'medium' | 'bold';
+export type TypographyWeight = 'thin' | 'normal' | 'medium' | 'bold' | '600';
 export type TypographyAlign =
   | 'inherit'
   | 'left'
